@@ -36,6 +36,7 @@ attributes:
 review:
   overall_score: 9.3
   heading: "千万级散户首选：极低门槛与 Ultra Low 零佣金超紧点差"
+  summary_text: "5美元开户与0.6点免佣"
   pros:
     - "创立于 2009 年的全球零售外汇巨头，服务超 1,000 万客户，99.35% 的订单在 1 秒内完成撮合"
     - "行业主力推出的 XM Ultra Low 超低点差账户，欧美低至 0.6 点且完全 0 交易佣金"

@@ -36,6 +36,7 @@ attributes:
 review:
   overall_score: 9.3
   heading: "瑞士持牌上市银行与高净值大资金终极避风港"
+  summary_text: "瑞士持牌上市银行十万保障"
   pros:
     - "瑞士主板上市公司（SIX: SQN），持有瑞士金融市场监管局（FINMA）商业银行与证券交易商双重全牌照"
     - "账户依法自动受瑞士联邦最高 10 万瑞郎（约合 11 万美元 / 80 万人民币）法定存款保障计划（esisuisse）保护"

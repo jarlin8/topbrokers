@@ -36,6 +36,7 @@ attributes:
 review:
   overall_score: 9.0      # 综合总分（1.0 ~ 10.0）
   heading: "一句话核心短评（提炼该平台最硬核的特征）"
+  summary_text: "独特亮点或简短总结" # 必填：15字以内独特亮点或简短总结（对应 REHub row__review_post_summary_text）
   pros:                   # 核心优势（3~5 条击中交易员痛点的优势）
     - "核心优势 1"
     - "核心优势 2"

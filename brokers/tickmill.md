@@ -36,6 +36,7 @@ attributes:
 review:
   overall_score: 9.3
   heading: "行业超低佣金与超紧点差的真实 ECN 标杆"
+  summary_text: "全网佣金地板价之王"
   pros:
     - "行业最低交易佣金第一梯队，Raw/Pro 账户每标准手双边佣金仅收 4~6 美元"
     - "持有英国 FCA (717270) 与塞浦路斯 CySEC (278/15) 双重权威监管，资金独立隔离存放"

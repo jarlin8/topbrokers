@@ -36,6 +36,7 @@ attributes:
 review:
   overall_score: 9.0
   heading: "机构级流动性血统与深耕亚太的 STP/ECN 新锐"
+  summary_text: "机构级流动性与ECN低佣"
   pros:
     - "集团旗下 CXM Prime 持有英国 FCA (612258) 顶级金融牌照，传承深厚的 B2B 机构级流动性撮合基因"
     - "核心推出 ECN 账户，主流欧美对 0.0 点差常态化，每标准手固定双边佣金仅收 6 美元"

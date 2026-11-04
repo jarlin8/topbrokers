@@ -36,6 +36,7 @@ attributes:
 review:
   overall_score: 9.1
   heading: "华语区高渗透率与全牌照合规的知名金融巨头"
+  summary_text: "全球十强与机构级免费投研"
   pros:
     - "屡次跻身 Finance Magnates 全球零售交易商前十强，季度交易量突破 5,000 亿美元"
     - "持有英国 FCA (760555/750501)、塞浦路斯 CySEC (285/15) 及阿联酋 SCA 等顶级多国牌照"

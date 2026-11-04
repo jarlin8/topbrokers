@@ -36,6 +36,7 @@ attributes:
 review:
   overall_score: 9.4
   heading: "全球零售真实 ECN 交易量常青树与量化 EA 标杆"
+  summary_text: "真实ECN鼻祖与量化标杆"
   pros:
     - "创立于 2007 年的老牌澳洲顶流经纪商，单月真实撮合交易量突破 1 万亿美元"
     - "行业标杆级的 Raw Spread 原始点差账户，主流欧美对 0.0 点差常态化"

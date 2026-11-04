@@ -200,6 +200,18 @@ def build_product_payload(meta):
         if review.get("heading"):
             meta_data.append({"key": "_review_heading", "value": str(review["heading"])})
 
+        summary_text = (
+            review.get("summary_text")
+            or review.get("summary")
+            or review.get("row__review_post_summary_text")
+            or meta.get("row__review_post_summary_text")
+            or ""
+        )
+        if summary_text:
+            meta_data.append({"key": "_review_post_summary_text", "value": str(summary_text)})
+            meta_data.append({"key": "rehub_woodeals_short", "value": str(summary_text)})
+            meta_data.append({"key": "row__review_post_summary_text", "value": str(summary_text)})
+
         pros = review.get("pros", [])
         if isinstance(pros, list):
             meta_data.append({"key": "_review_post_pros_text", "value": "\n".join(pros)})

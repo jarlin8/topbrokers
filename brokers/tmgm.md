@@ -36,6 +36,7 @@ attributes:
 review:
   overall_score: 9.1
   heading: "澳网官方赞助商与高杠杆深度流动性老牌经纪商"
+  summary_text: "澳网赞助商与EDGE零点差"
   pros:
     - "澳大利亚网球公开赛（AO）与周杰伦巡演官方赞助品牌，品牌公信力强"
     - "EDGE 账户欧美点差低至 0.0 起，深度直连三大数据中心流动性池"

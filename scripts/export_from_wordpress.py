@@ -160,6 +160,7 @@ def export_single_product(prod_id, output_dir="brokers"):
     review_data = {
         "overall_score": score_val,
         "heading": meta_dict.get("_review_heading") or "",
+        "summary_text": meta_dict.get("_review_post_summary_text") or meta_dict.get("rehub_woodeals_short") or "",
         "pros": pros,
         "cons": cons,
         "criteria": criteria

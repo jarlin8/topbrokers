@@ -36,6 +36,7 @@ attributes:
 review:
   overall_score: 9.0
   heading: "高杠杆赠金与 ProTrader 综合体验兼具的老牌平台"
+  summary_text: "5000万美元保险与高额赠金"
   pros:
     - "成立逾 15 年老牌澳洲券商，持有 ASIC (428901) 与 FCA (590299) 双重监管"
     - "Raw ECN 账户点差极低，欧美 0.0 起，每手双边佣金仅收 6 美元"

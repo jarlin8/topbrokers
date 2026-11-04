@@ -36,6 +36,7 @@ attributes:
 review:
   overall_score: 9.2
   heading: "低延迟 ECN 执行与 TradingView/cTrader 直连的标杆级平台"
+  summary_text: "双一线监管与极速裸点差"
   pros:
     - "深度支持 TradingView 与 cTrader 直连交易，看盘与下单无缝闭环"
     - "Razor 裸点差账户欧美 0.0 起，cTrader 佣金低至双边 6 美元/手，交易摩擦成本极低"

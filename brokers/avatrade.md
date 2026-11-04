@@ -36,6 +36,7 @@ attributes:
 review:
   overall_score: 9.1
   heading: "爱尔兰老牌先锋与 AvaProtect 零风险护航首创者"
+  summary_text: "九重监管与专属防亏护航"
   pros:
     - "创立于 2006 年的爱尔兰都柏林老牌金融巨擘，持有爱尔兰央行（CBI）、澳洲 ASIC 等九重全球顶级金融监管牌照"
     - "行业首创 AvaProtect 资金护航机制：指定时间内交易亏损由平台全额赔偿，盈利全归交易员所有"

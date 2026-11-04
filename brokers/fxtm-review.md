@@ -36,6 +36,7 @@ attributes:
 review:
   overall_score: 9.2
   heading: "老牌金融集团巨擘：Advantage 裸点差与跟单投资生态标杆"
+  summary_text: "0.0裸点差与专业社交跟单"
   pros:
     - "创立于 2011 年的 Exinity 集团核心旗舰品牌，服务超 400 万国际注册交易员"
     - "核心推出 Advantage 优势裸点差账户，主流欧美 0.0 点差常态化，单边佣金仅 0.4~2 美元"
