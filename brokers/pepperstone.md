@@ -69,8 +69,12 @@ review:
 ### 1. TradingView 官方直连下单
 激石是最早与 TradingView 达成底层 API 深度打通的主流外汇平台之一。开立 Razor（尖峰）账户后，在 TradingView 图表下方的交易面板直接登录激石账号，图表上出现的每一条支撑阻力位都可以直接拖拽成为止损单或限价单，看盘到成交耗时仅在几十毫秒之间，彻底告别了跨窗口操作带来的延迟和误触。
 
+![Pepperstone激石官方直连TradingView交易面板实操界面](https://cdn.jsdelivr.net/gh/jarlin8/fendou.la@116a5c4/attachments/pepperstone-review-pepperstone-tradingview.png)
+
 ### 2. cTrader 平台与超低交易费率
 除了常规的 MT4/MT5，激石主推的 cTrader 平台堪称量化与高频交易者的利器。平台不仅自带完整的二级市场深度（L2 行情报价），支持以微秒级观察订单薄厚度，而且激石为 cTrader 设定的佣金是全网最低档之一：每手双边仅收 6 美元（折合单边 3 美元），比在 MT4/MT5 上的双边 7 美元还要便宜近 15%。
+
+![Pepperstone激石cTrader深度订单簿与极速撮合终端](https://cdn.jsdelivr.net/gh/jarlin8/fendou.la@c9024be/attachments/pepperstone-review-pepperstone-ctrader.jpg)
 
 ### 3. NY4 与 LD4 跨国双机房光纤直连
 激石的交易撮合引擎部署在纽约 Equinix NY4 和伦敦 Equinix LD4 两个全球顶级金融数据中心，与一级投行流动性提供商处于同一机房物理光纤直连，主流外汇货币对平时平均执行延迟维持在 30 毫秒以内，日常挂单成交几乎感受不到任何卡顿。

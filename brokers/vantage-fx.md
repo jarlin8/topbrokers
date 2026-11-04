@@ -86,11 +86,15 @@ review:
 ### 1. 基于 TradingView 底层的 ProTrader 平台
 如果你习惯了 TradingView 优雅强大的绘图分析工具，却苦于独立软件下单繁琐，万致的 ProTrader 是极具吸引力的解决方案。它直接将 TradingView 核心图表引擎嵌入交易终端，内置超过 100 种技术指标与画线工具，允许交易员在图表上直接右键挂单、拖拽止盈止损线，成交反馈几乎没有感知延迟。
 
+![Vantage万致ProTrader基于TradingView图表引擎的实盘看盘与下单界面](https://cdn.jsdelivr.net/gh/jarlin8/fendou.la@f8afbc2/attachments/vantage-review-vantage-web-trading.webp)
+
 ### 2. MT4 / MT5 与 Equinix 光纤低延迟
 万致对传统的 MetaTrader 4 与 MetaTrader 5 保持着完善的技术支持。服务器直连纽约 NY4 和伦敦 LD4 数据中心，平均撮合响应时间稳定在 30~50 毫秒之间，且完全开放对冲锁仓、高频剥头皮以及网格马丁 EA 策略。
 
 ### 3. Vantage Copy Trading 自带跟单社区
 针对没有充裕时间盯盘的副业交易者，万致官方 App 深度整合了社交跟单系统。交易员可以查阅全球信号源的历史最大回撤、胜率与盈亏比曲线，实现一键自动化反向或正向跟投。
+
+![Vantage万致移动端App与社区跟单生态界面](https://cdn.jsdelivr.net/gh/jarlin8/fendou.la@074eef6/attachments/vantage-review-vantage-app.webp)
 
 ---
 

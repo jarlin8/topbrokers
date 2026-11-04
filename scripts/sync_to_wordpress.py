@@ -109,6 +109,13 @@ def markdown_to_gutenberg_blocks(md_text):
                         level = len(m.group(1))
                         htext = m.group(2).strip()
                         output_blocks.append(f'<!-- wp:heading {{"level":{level}}} -->\n<h{level} class="wp-block-heading">{htext}</h{level}>\n<!-- /wp:heading -->')
+                elif chunk.startswith("![") and "](" in chunk:
+                    # 原生 Gutenberg Image Block
+                    m = re.match(r'^!\[(.*?)\]\((.*?)\)$', chunk)
+                    if m:
+                        alt = m.group(1).strip()
+                        src = m.group(2).strip()
+                        output_blocks.append(f'<!-- wp:image {{"sizeSlug":"large","linkDestination":"none"}} -->\n<figure class="wp-block-image size-large"><img src="{src}" alt="{alt}"/><figcaption class="wp-element-caption">{alt}</figcaption></figure>\n<!-- /wp:image -->')
                 elif chunk.startswith("|") and "|" in chunk:
                     # 表格 Block
                     table_html = markdown.markdown(chunk, extensions=['tables'])
