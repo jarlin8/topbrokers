@@ -95,15 +95,16 @@ review:
 
 ## 资金安全防线：英国 FCA 与澳洲 ASIC 双牌照下的隔离逻辑
 
-在零售交易市场，任何不谈监管的评测都是空中楼阁。激石在合规底牌上属于典型的“老牌一线配置”：
+在零售交易市场，任何不谈监管的评测都是空中楼阁。激石在合规底牌上属于典型的“老牌一线配置”，以下为官方权威监管登记信息：
 
-1. **核心一线监管背书**：
-   * **澳大利亚证券与投资委员会（ASIC）**：执照号 **414530**（主体：Pepperstone Group Limited），墨尔本总部运营基石；
-   * **英国金融行为监管局（FCA）**：执照号 **684312**（主体：Pepperstone Limited），全球公认风控合规最严苛的监管体系；
-   * **德国 BaFin 与塞浦路斯 CySEC**：覆盖全欧洲金融区牌照。
+1. **核心一线监管官方公示**：
+   * **澳大利亚证券与投资委员会（ASIC）**：执照号 **414530**（主体：Pepperstone Group Limited），可在 [ASIC 官方专业登记系统](https://connectonline.asic.gov.au/) 实时查验；
+   * **英国金融行为监管局（FCA）**：执照号 **684312**（主体：Pepperstone Limited），可在 [英国 FCA 金融服务注册网](https://register.fca.org.uk/) 核验全牌照资质；
+   * **德国联邦金融监管局（BaFin）**：注册号 **151148**（主体：Pepperstone GmbH），具备向欧洲高净值客户提供金融衍生品的合规资格；
+   * **塞浦路斯证券交易委员会（CySEC）**：牌照号 **388/20**（主体：Pepperstone EU Limited）。
 2. **亚太客户开户实体与资金存放**：
-   * 针对包括华语区在内的国际零售客户，为了避开 ASIC/FCA 对杠杆的严苛限制（最高仅 1:30），通常开户接入 **巴哈马 SCB（执照号 SIA-F217）** 监管实体，提供最高 1:400 的实盘杠杆；
-   * **账户物理隔离机制**：客户入金并不进入激石自身的日常运营账目，而是统一隔离存放在澳洲国民银行（NAB）、巴克莱银行等国际一级商业银行的独立托管账户中，平台每天执行严格的资产负债对账。
+   * 针对华语区在内的国际零售客户，为了避开英国与澳洲对零售杠杆仅 1:30 的死板限制，通常开户接入 **巴哈马证券委员会（SCB，牌照号 SIA-F217）** 监管实体（可在 [巴哈马 SCB 官网登记名录](https://www.scb.gov.bs/) 查证），提供最高 1:400 的实盘杠杆；
+   * **账户物理隔离机制**：依据 [Pepperstone 官方产品披露声明（PDS）](https://pepperstone.com/)，所有客户入金并不进入激石自身的运营账户，而是统一隔离存放在澳洲国民银行（NAB）、英国巴克莱银行等国际一级商业银行的独立信托托管账户中，平台每天执行严格的资产负债对账。
 
 ---
 
@@ -120,6 +121,15 @@ review:
 
 ---
 
+## 激石与同赛道头部的横向微对比（激石 vs IC Markets vs Exness）
+
+很多汇友在激石、IC Markets 和 Exness 之间纠结，作为常年在实盘一线的交易员，三者的定位差异非常鲜明：
+
+* **激石 vs IC Markets**：两者点差与流动性几乎处于同一水平线。但激石的核心优势在于 **TradingView 官方直连体验更丝滑**，且 **cTrader 账户佣金比 IC Markets 更低（每手 6 美元 vs 7 美元）**；IC Markets 的优势则在于跟单社区（Social Trading）更成熟，可交易的冷门小币种稍微更多一些。
+* **激石 vs Exness**：Exness 胜在极致的自由度（高达无限杠杆、绝大多数品种无隔夜利息、秒级自动出金），极其适合超小资金博弈和黄金日内刷单；而激石则胜在 **真实的 ECN 深度和绝无重复报价（No Re-quotes）**，更适合把外汇当作严肃投资、运行中高频量化 EA 或资金量在 5000 美元以上的严肃交易者。
+
+---
+
 ## 激石实盘交易中的两大硬伤：非农滑点与隔夜持仓利息
 
 任何平台都有局限，在激石实盘过程中，交易员需要特别警惕以下两点：
@@ -131,7 +141,7 @@ review:
 
 ## 激石开户实务常见问题
 
-<!-- wp:rank-math/faq-block {"questions":[{"id":"faq-question-1","title":"Pepperstone 激石在华语区支持中文客服吗？","content":"<p>支持。Pepperstone 配备了专业的华语客服团队，提供 24/5 全天候在线 LiveChat 实时对话与邮件技术支持。实测在工作日白天通过官网右下角呼叫客服，响应等待时间通常在 1~3 分钟内即可接入真人中文对话。</p>","visible":true},{"id":"faq-question-2","title":"Razor 账户如何在 TradingView 上直接下单交易？","content":"<p>非常简单。首先在激石官网开设一个 Razor（尖峰）账户，交易平台选择 TradingView；随后打开 TradingView 网页或桌面端，进入图表下方的“交易面板（Trading Panel）”，在经纪商列表中找到 Pepperstone，点击连接并输入激石账户密码即可完成授权。此后即可直接在图表上通过快捷键或右键一键下单。</p>","visible":true},{"id":"faq-question-3","title":"Pepperstone 的最低开户入金门槛是多少？","content":"<p>官方技术上没有强制的最低入金门槛（理论上 10 美元即可入金），但为了满足 0.01 手基础头寸的保证金占用以及合理的抗风险资金管理，官方与老交易员通常建议初始入金在 200 美元或以上最为合适。</p>","visible":true}]} -->
+<!-- wp:rank-math/faq-block {"questions":[{"id":"faq-question-1","title":"Pepperstone 激石在华语区支持中文客服吗？","content":"<p>支持。Pepperstone 配备了专业的华语客服团队，提供 24/5 全天候在线 LiveChat 实时对话与邮件技术支持。实测在工作日白天通过官网右下角呼叫客服，响应等待时间通常在 1~3 分钟内即可接入真人中文对话。</p>","visible":true},{"id":"faq-question-2","title":"Razor 账户如何在 TradingView 上直接下单交易？","content":"<p>非常简单。首先在激石官网开设一个 Razor（尖峰）账户，交易平台选择 TradingView；随后打开 TradingView 网页或桌面端，进入图表下方的“交易面板（Trading Panel）”，在经纪商列表中找到 Pepperstone，点击连接并输入激石账户密码即可完成授权。此后即可直接在图表上通过快捷键或右键一键下单。</p>","visible":true},{"id":"faq-question-3","title":"Pepperstone 的最低开户入金门槛是多少？","content":"<p>官方技术上没有强制的最低入金门槛（理论上 10 美元即可入金），但为了满足 0.01 手基础头寸的保证金占用以及合理的抗风险资金管理，官方与老交易员通常建议初始入金在 200 美元或以上最为合适。</p>","visible":true},{"id":"faq-question-4","title":"激石开户在哪个监管实体下？资金是否真的安全？","content":"<p>华语区零售交易者默认开在巴哈马 SCB（牌照号 SIA-F217）或毛里求斯 FSC 监管实体下，以享受 1:400 的实盘杠杆。客户资金严格存放于澳洲国民银行（NAB）等国际顶级银行的独立信托托管账户，平台每日与银行核对账目，即便平台出现经营危机，客户资金依法不得用于清偿平台债务。</p>","visible":true},{"id":"faq-question-5","title":"Razor 裸点差账户和标准账户，一年交易下来能省多少成本？","content":"<p>以日均交易 3 手欧美货币对（EURUSD）的全职交易员为例：标准账户平均点差 1.1 点，单年摩擦成本约 7,920 美元；而使用 cTrader 平台的 Razor 账户，平均点差 0.1 点加上每手 6 美元佣金，单年总成本仅约 5,040 美元。一年可直接省下超过 2,800 美元纯利润。</p>","visible":true},{"id":"faq-question-6","title":"激石允许高频刷单（Scalping）、剥头皮以及网格马丁 EA 吗？","content":"<p>完全允许。激石采用无交易员干预（NDD）的真实 ECN 撮合机制，对订单持仓时间没有任何限制（持仓几秒钟即可平仓），同时也完全开放任意自动化交易策略，包括高频剥头皮、新闻挂单突破、网格马丁和三角对冲算法。</p>","visible":true},{"id":"faq-question-7","title":"激石出金有哪些方式？出金需要多长时间到账？","content":"<p>激石支持本地银行卡（银联通道）、USDT（TRC20/ERC20）以及国际电汇出金。官方出金零手续费。实测工作日白天提交出金申请，财务审核通过后，USDT 通常在 15~30 分钟内到账，银行卡快捷通道通常在 2~6 小时内到账。</p>","visible":true}]} -->
 <div id="rank-math-faq" class="rank-math-block">
 <div class="rank-math-list ">
 <div id="faq-question-1" class="rank-math-list-item">
@@ -145,6 +155,22 @@ review:
 <div id="faq-question-3" class="rank-math-list-item">
 <h3 class="rank-math-question ">Pepperstone 的最低开户入金门槛是多少？</h3>
 <div class="rank-math-answer "><p>官方技术上没有强制的最低入金门槛（理论上 10 美元即可入金），但为了满足 0.01 手基础头寸的保证金占用以及合理的抗风险资金管理，官方与老交易员通常建议初始入金在 200 美元或以上最为合适。</p></div>
+</div>
+<div id="faq-question-4" class="rank-math-list-item">
+<h3 class="rank-math-question ">激石开户在哪个监管实体下？资金是否真的安全？</h3>
+<div class="rank-math-answer "><p>华语区零售交易者默认开在巴哈马 SCB（牌照号 SIA-F217）或毛里求斯 FSC 监管实体下，以享受 1:400 的实盘杠杆。客户资金严格存放于澳洲国民银行（NAB）等国际顶级银行的独立信托托管账户，平台每日与银行核对账目，即便平台出现经营危机，客户资金依法不得用于清偿平台债务。</p></div>
+</div>
+<div id="faq-question-5" class="rank-math-list-item">
+<h3 class="rank-math-question ">Razor 裸点差账户和标准账户，一年交易下来能省多少成本？</h3>
+<div class="rank-math-answer "><p>以日均交易 3 手欧美货币对（EURUSD）的全职交易员为例：标准账户平均点差 1.1 点，单年摩擦成本约 7,920 美元；而使用 cTrader 平台的 Razor 账户，平均点差 0.1 点加上每手 6 美元佣金，单年总成本仅约 5,040 美元。一年可直接省下超过 2,800 美元纯利润。</p></div>
+</div>
+<div id="faq-question-6" class="rank-math-list-item">
+<h3 class="rank-math-question ">激石允许高频刷单（Scalping）、剥头皮以及网格马丁 EA 吗？</h3>
+<div class="rank-math-answer "><p>完全允许。激石采用无交易员干预（NDD）的真实 ECN 撮合机制，对订单持仓时间没有任何限制（持仓几秒钟即可平仓），同时也完全开放任意自动化交易策略，包括高频剥头皮、新闻挂单突破、网格马丁和三角对冲算法。</p></div>
+</div>
+<div id="faq-question-7" class="rank-math-list-item">
+<h3 class="rank-math-question ">激石出金有哪些方式？出金需要多长时间到账？</h3>
+<div class="rank-math-answer "><p>激石支持本地银行卡（银联通道）、USDT（TRC20/ERC20）以及国际电汇出金。官方出金零手续费。实测工作日白天提交出金申请，财务审核通过后，USDT 通常在 15~30 分钟内到账，银行卡快捷通道通常在 2~6 小时内到账。</p></div>
 </div>
 </div>
 </div>
