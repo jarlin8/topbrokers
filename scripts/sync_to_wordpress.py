@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-WordPress / REHub Broker 自动化同步脚本
-将 Markdown 文件解析并推送到 we.laowei8.com (开户通) WooCommerce 产品库。
+WordPress / REHub Broker 自动化同步脚本 (原生 Gutenberg Block 引擎)
+将 Markdown 文件解析并推送到 we.laowei8.com (开户通) WooCommerce 产品库，
+所有文本与模块严格转换为 WordPress 官方原生 Block 结构。
 """
 
 import sys
@@ -76,27 +77,74 @@ def parse_markdown_file(file_path):
     meta = yaml.safe_load(frontmatter_raw)
     return meta, body_markdown
 
-def markdown_to_html(md_text):
-    """将 Markdown 转换为兼容 WordPress 的 HTML"""
-    return markdown.markdown(
-        md_text,
-        extensions=[
-            "extra",          # 表格、属性列表等
-            "nl2br",          # 换行转换为 <br>
-            "sane_lists",     # 更好的列表解析
-            "codehilite"      # 代码高亮
-        ]
-    )
+def markdown_to_gutenberg_blocks(md_text):
+    """
+    将 Markdown 文本严格解析为 WordPress 原生 Gutenberg Blocks 结构，
+    确保段落、标题、列表、表格和 Rank Math FAQ Block 完全按原生 Block 渲染。
+    """
+    # 替换特殊货币符号避免被解析器忽略
+    protected_md = md_text.replace("$", "美元 ")
+    
+    # 保护已存在的 Gutenberg Block 注释（如 Rank Math FAQ block）
+    wp_pattern = re.compile(r'(<!-- wp:[a-z0-9\-\/]+.*?-->.*?<!-- /wp:[a-z0-9\-\/]+ -->)', re.DOTALL)
+    parts = wp_pattern.split(protected_md)
+    output_blocks = []
 
-def build_product_payload(meta, body_html):
-    """根据元数据和 HTML 正文组装 WooCommerce 产品结构"""
+    for part in parts:
+        part = part.strip()
+        if not part:
+            continue
+        if part.startswith("<!-- wp:"):
+            # 已经是合法的 Gutenberg Block，直接保留
+            output_blocks.append(part)
+        else:
+            # 切分普通 Markdown 块（按双换行切分）
+            chunks = [c.strip() for c in re.split(r'\n{2,}', part) if c.strip()]
+            for chunk in chunks:
+                if chunk.startswith("---") or chunk == "***":
+                    output_blocks.append('<!-- wp:separator -->\n<hr class="wp-block-separator has-alpha-channel-opacity"/>\n<!-- /wp:separator -->')
+                elif chunk.startswith("#"):
+                    m = re.match(r'^(#{1,6})\s+(.*)$', chunk)
+                    if m:
+                        level = len(m.group(1))
+                        htext = m.group(2).strip()
+                        output_blocks.append(f'<!-- wp:heading {{"level":{level}}} -->\n<h{level} class="wp-block-heading">{htext}</h{level}>\n<!-- /wp:heading -->')
+                elif chunk.startswith("|") and "|" in chunk:
+                    # 表格 Block
+                    table_html = markdown.markdown(chunk, extensions=['tables'])
+                    # 清理表格多余空白
+                    table_html = re.sub(r'>\s+<', '><', table_html)
+                    output_blocks.append(f'<!-- wp:table -->\n<figure class="wp-block-table">{table_html}</figure>\n<!-- /wp:table -->')
+                elif chunk.startswith("- ") or chunk.startswith("* "):
+                    # 无序列表 Block
+                    list_html = markdown.markdown(chunk).strip()
+                    output_blocks.append(f'<!-- wp:list -->\n{list_html}\n<!-- /wp:list -->')
+                elif re.match(r'^\d+\.\s+', chunk):
+                    # 有序列表 Block
+                    list_html = markdown.markdown(chunk).strip()
+                    output_blocks.append(f'<!-- wp:list {{"ordered":true}} -->\n{list_html}\n<!-- /wp:list -->')
+                elif chunk.startswith(">"):
+                    # 引用 Block
+                    q_text = re.sub(r'^>\s?', '', chunk, flags=re.MULTILINE).strip()
+                    q_html = markdown.markdown(q_text).strip()
+                    output_blocks.append(f'<!-- wp:quote -->\n<blockquote class="wp-block-quote">{q_html}</blockquote>\n<!-- /wp:quote -->')
+                else:
+                    # 普通段落 Block
+                    p_html = markdown.markdown(chunk).strip()
+                    if p_html.startswith("<p>") and p_html.endswith("</p>"):
+                        p_html = p_html[3:-4].strip()
+                    output_blocks.append(f'<!-- wp:paragraph -->\n<p>{p_html}</p>\n<!-- /wp:paragraph -->')
+
+    return '\n\n'.join(output_blocks)
+
+def build_product_payload(meta):
+    """组装 WooCommerce 产品属性、外链及 Meta 数据"""
     payload = {
         "name": meta.get("name"),
         "type": meta.get("type", "external"),
         "status": meta.get("status", "publish"),
         "external_url": meta.get("external_url", "https://s.ssgg.net/xxxx"),
         "button_text": meta.get("button_text", "官网开户"),
-        "description": body_html,
     }
 
     if meta.get("slug"):
@@ -106,7 +154,6 @@ def build_product_payload(meta, body_html):
     attributes_data = []
     input_attrs = meta.get("attributes", {})
     for attr_name, attr_val in input_attrs.items():
-        # 清理名称匹配
         clean_name = attr_name.strip()
         matched_info = None
         for k, v in GLOBAL_ATTR_MAP.items():
@@ -135,11 +182,8 @@ def build_product_payload(meta, body_html):
 
     # 2. 组装 REHub 评分与 Rank Math SEO Meta
     meta_data = []
-    
-    # REHub 布局保持 woo_compact
     meta_data.append({"key": "_rh_woo_product_layout", "value": "woo_compact"})
 
-    # REHub Review 字段
     review = meta.get("review", {})
     if review:
         overall_score = str(review.get("overall_score", "9.0"))
@@ -167,7 +211,6 @@ def build_product_payload(meta, body_html):
                 meta_data.append({"key": f"_review_score_criteria_{idx}", "value": c_score})
             meta_data.append({"key": "_review_post_criteria", "value": criteria_list})
 
-    # Rank Math SEO 字段
     seo = meta.get("seo", {})
     if seo:
         if seo.get("title"):
@@ -187,7 +230,6 @@ def update_file_id(file_path, new_id):
     with open(file_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # 替换 id: null 或 id: 0
     updated = re.sub(r"^id:\s*(null|none|0|\"\"|'')\s*$", f"id: {new_id}", content, flags=re.MULTILINE | re.IGNORECASE)
     if updated != content:
         with open(file_path, "w", encoding="utf-8") as f:
@@ -195,12 +237,14 @@ def update_file_id(file_path, new_id):
         print(f"📝 已将新建产品 ID [{new_id}] 回写至本地文件: {file_path}")
 
 def sync_broker_file(file_path, dry_run=False):
-    """同步单个 Markdown 文件至 WordPress"""
+    """同步单个 Markdown 文件至 WordPress（使用 Gutenberg 原生 Blocks）"""
     print(f"\n==========================================")
     print(f"正在处理文件: {file_path}")
     meta, body_markdown = parse_markdown_file(file_path)
-    body_html = markdown_to_html(body_markdown)
-    payload = build_product_payload(meta, body_html)
+    
+    # 转换为原生 Gutenberg Blocks
+    gutenberg_blocks = markdown_to_gutenberg_blocks(body_markdown)
+    payload = build_product_payload(meta)
 
     product_id = meta.get("id")
     name = meta.get("name", "未命名")
@@ -211,49 +255,75 @@ def sync_broker_file(file_path, dry_run=False):
         print(f"  - 外链: {payload.get('external_url')}")
         print(f"  - 属性数量: {len(payload.get('attributes', []))}")
         print(f"  - Meta 项数: {len(payload.get('meta_data', []))}")
-        print(f"  - HTML 正文长度: {len(body_html)} 字符")
+        print(f"  - Gutenberg Blocks 字符数: {len(gutenberg_blocks)}")
+        first_few = '\n'.join(gutenberg_blocks.split('\n')[:8])
+        print(f"  - Blocks 前导片段:\n{first_few}")
         return True
 
+    # 1. 更新产品属性及 WooCommerce / REHub Meta
     if product_id:
-        print(f"🔄 正在更新已有产品: [{name}] (ID: {product_id})...")
-        route = f"/wc/v3/products/{product_id}"
-        res = call_mcp_tool("wp_rest_write", {
-            "route": route,
+        print(f"🔄 1/2 正在更新属性与评分: [{name}] (ID: {product_id})...")
+        route_wc = f"/wc/v3/products/{product_id}"
+        res_wc = call_mcp_tool("wp_rest_write", {
+            "route": route_wc,
             "method": "PUT",
             "body": payload
         })
     else:
-        print(f"✨ 正在新建产品: [{name}]...")
-        route = "/wc/v3/products"
-        res = call_mcp_tool("wp_rest_write", {
-            "route": route,
+        print(f"✨ 1/2 正在创建产品: [{name}]...")
+        route_wc = "/wc/v3/products"
+        res_wc = call_mcp_tool("wp_rest_write", {
+            "route": route_wc,
             "method": "POST",
             "body": payload
         })
 
-    # 检查返回结果
-    res_text = res.get("result", {}).get("content", [{}])[0].get("text", "")
+    wc_text = res_wc.get("result", {}).get("content", [{}])[0].get("text", "")
+    data_wc = json.loads(wc_text)
+    if data_wc.get("status") not in [200, 201]:
+        print(f"❌ WooCommerce 基础属性更新失败: {wc_text[:300]}")
+        return False
+
+    actual_id = data_wc.get("data", {}).get("id") or product_id
+    if not product_id and actual_id:
+        update_file_id(file_path, actual_id)
+
+    # 2. 通过 WordPress 核心 REST API 推送原生 Gutenberg Blocks 内容
+    print(f"🧱 2/2 正在注入原生 Gutenberg Blocks 正文 (ID: {actual_id})...")
+    route_wp = f"/wp/v2/product/{actual_id}"
+    res_wp = call_mcp_tool("wp_rest_write", {
+        "route": route_wp,
+        "method": "POST",
+        "body": {
+            "content": gutenberg_blocks
+        }
+    })
+
+    wp_text = res_wp.get("result", {}).get("content", [{}])[0].get("text", "")
     try:
-        data = json.loads(res_text)
-        if data.get("status") in [200, 201]:
-            resp_data = data.get("data", {})
-            returned_id = resp_data.get("id")
-            link = resp_data.get("permalink", "")
-            print(f"✅ 同步成功！产品 ID: {returned_id}")
+        data_wp = json.loads(wp_text)
+        if data_wp.get("status") in [200, 201]:
+            link = data_wp.get("data", {}).get("link", "")
+            print(f"✅ 同步成功！原生 Gutenberg Blocks 已注入！")
             print(f"   前台链接: {link}")
-            if not product_id and returned_id:
-                update_file_id(file_path, returned_id)
+            
+            # 清除缓存
+            call_mcp_tool("wp_clear_cache", {
+                "scope": "posts",
+                "post_ids": [int(actual_id)]
+            })
+            print(f"🧹 已自动刷新前台与 CDN 缓存")
             return True
         else:
-            print(f"❌ 同步失败: {res_text[:300]}")
+            print(f"⚠️ 正文注入反馈: {wp_text[:300]}")
             return False
     except Exception as e:
-        print(f"⚠️ 解析响应出错: {e}, 原文: {res_text[:300]}")
+        print(f"⚠️ 解析核心响应出错: {e}, 原文: {wp_text[:300]}")
         return False
 
 def main():
     import argparse
-    parser = argparse.ArgumentParser(description="WordPress Broker Markdown 同步工具")
+    parser = argparse.ArgumentParser(description="WordPress Broker Gutenberg Blocks 同步工具")
     parser.add_argument("path", nargs="?", default="brokers", help="Markdown 文件路径或 brokers 目录路径")
     parser.add_argument("--dry-run", action="store_true", help="演练模式，仅打印组装结构不实际提交")
     args = parser.parse_args()
