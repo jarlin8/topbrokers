@@ -74,8 +74,6 @@ review:
 ### 2. cTrader 平台与超低交易费率
 除了常规的 MT4/MT5，激石主推的 cTrader 平台堪称量化与高频交易者的利器。平台不仅自带完整的二级市场深度（L2 行情报价），支持以微秒级观察订单薄厚度，而且激石为 cTrader 设定的佣金是全网最低档之一：每手双边仅收 6 美元（折合单边 3 美元），比在 MT4/MT5 上的双边 7 美元还要便宜近 15%。
 
-![Pepperstone激石cTrader深度订单簿与极速撮合终端](https://cdn.jsdelivr.net/gh/jarlin8/fendou.la@c9024be/attachments/pepperstone-review-pepperstone-ctrader.jpg)
-
 ### 3. NY4 与 LD4 跨国双机房光纤直连
 激石的交易撮合引擎部署在纽约 Equinix NY4 和伦敦 Equinix LD4 两个全球顶级金融数据中心，与一级投行流动性提供商处于同一机房物理光纤直连，主流外汇货币对平时平均执行延迟维持在 30 毫秒以内，日常挂单成交几乎感受不到任何卡顿。
 
@@ -131,6 +129,8 @@ review:
 
 * **激石 vs IC Markets**：两者点差与流动性几乎处于同一水平线。但激石的核心优势在于 **TradingView 官方直连体验更丝滑**，且 **cTrader 账户佣金比 IC Markets 更低（每手 6 美元 vs 7 美元）**；IC Markets 的优势则在于跟单社区（Social Trading）更成熟，可交易的冷门小币种稍微更多一些。
 * **激石 vs Exness**：Exness 胜在极致的自由度（高达无限杠杆、绝大多数品种无隔夜利息、秒级自动出金），极其适合超小资金博弈和黄金日内刷单；而激石则胜在 **真实的 ECN 深度和绝无重复报价（No Re-quotes）**，更适合把外汇当作严肃投资、运行中高频量化 EA 或资金量在 5000 美元以上的严肃交易者。
+
+![Pepperstone激石cTrader深度订单簿与L2买卖盘口实测](https://cdn.jsdelivr.net/gh/jarlin8/fendou.la@c9024be/attachments/pepperstone-review-pepperstone-ctrader.jpg)
 
 ---
 
