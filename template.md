@@ -122,11 +122,17 @@ review:
 
 ## 六、 常见问题解答 (FAQ)
 
-### Q1：在该平台开户有中文客服支持吗？
-**答**：详细解答客服工作时段、在线 LiveChat 或邮件响应速度。
-
-### Q2：出入金是否有隐形手续费或汇率折算损失？
-**答**：详细拆解支付通道的汇率结算逻辑与手续费规则。
-
-### Q3：支持高频 EA 量化交易和网格马丁策略吗？
-**答**：说明平台对订单频率、持仓时间（是否限制低于 2 分钟）的具体风控条款。
+<!-- wp:rank-math/faq-block {"questions":[{"id":"faq-question-1","title":"常见问题 1 标题？","content":"<p>常见问题 1 详细解答...</p>","visible":true},{"id":"faq-question-2","title":"常见问题 2 标题？","content":"<p>常见问题 2 详细解答...</p>","visible":true}]} -->
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1" class="rank-math-list-item">
+<h3 class="rank-math-question ">常见问题 1 标题？</h3>
+<div class="rank-math-answer "><p>常见问题 1 详细解答...</p></div>
+</div>
+<div id="faq-question-2" class="rank-math-list-item">
+<h3 class="rank-math-question ">常见问题 2 标题？</h3>
+<div class="rank-math-answer "><p>常见问题 2 详细解答...</p></div>
+</div>
+</div>
+</div>
+<!-- /wp:rank-math/faq-block -->
