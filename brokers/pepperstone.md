@@ -91,7 +91,15 @@ review:
 | **交易手续费/佣金** | 0 佣金 | cTrader: 6 美元/手；MT4/5/TV: 7 美元/手 | 透明固定扣除 |
 | **执行机制** | STP 市价执行 | 纯正 ECN 撮合机制 | 直通银行间市场流动性 |
 
-> 💡 **成本算账**：以欧美 EURUSD 为例，标准账户 1.1 点的点差意味着每手实际成本约 11 美元；而 Razor 账户即便按 0.1 点差加上 6~7 美元佣金，总成本也仅在 7~8 美元左右。日内只要跑 2~3 手以上，省下的摩擦成本就极其可观。
+> 💡 **成本算账**：以欧美 EURUSD 为例，标准账户 1.1 点的点差意味着每手实际成本约 11 美元；而 Razor 账户即便按 0.1 点差加上 6~7 美元佣金，总成本也仅在 7~8 美元左右。日内只要跑 2~3 手以上，省下的摩擦成本就极其可观。想了解激石与其他低点差平台的横向数据，也可参考本站的 [2026 年 10 大最佳真实 ECN 外汇经纪商对比](https://we.laowei8.com/best-ecn-brokers.html)。
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons">
+<!-- wp:button {"backgroundColor":"primary","textColor":"white","style":{"border":{"radius":"4px"}},"fontSize":"medium"} -->
+<div class="wp-block-button has-custom-font-size has-medium-font-size"><a class="wp-block-button__link wp-element-button has-white-color has-primary-background-color has-text-color has-background" href="https://s.ssgg.net/pepperstone" target="_blank" rel="nofollow noopener">👉 访问激石官方专属通道开设 Razor 账户</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
 
 ---
 
@@ -101,7 +109,7 @@ review:
 
 1. **核心一线监管官方公示**：
    * **澳大利亚证券与投资委员会（ASIC）**：执照号 **414530**（主体：Pepperstone Group Limited），可在 [ASIC 官方专业登记系统](https://connectonline.asic.gov.au/) 实时查验；
-   * **英国金融行为监管局（FCA）**：执照号 **684312**（主体：Pepperstone Limited），可在 [英国 FCA 金融服务注册网](https://register.fca.org.uk/) 核验全牌照资质；
+   * **英国金融行为监管局（FCA）**：执照号 **684312**（主体：Pepperstone Limited），可在 [英国 FCA 金融服务注册网](https://register.fca.org.uk/) 核验全牌照资质。若想了解更多识别套牌与防坑细节，可阅读 [FCA 牌照防骗与黑平台识别指南](https://we.laowei8.com/fca-details.html)；
    * **德国联邦金融监管局（BaFin）**：注册号 **151148**（主体：Pepperstone GmbH），具备向欧洲高净值客户提供金融衍生品的合规资格；
    * **塞浦路斯证券交易委员会（CySEC）**：牌照号 **388/20**（主体：Pepperstone EU Limited）。
 2. **亚太客户开户实体与资金存放**：
@@ -127,8 +135,8 @@ review:
 
 很多汇友在激石、IC Markets 和 Exness 之间纠结，作为常年在实盘一线的交易员，三者的定位差异非常鲜明：
 
-* **激石 vs IC Markets**：两者点差与流动性几乎处于同一水平线。但激石的核心优势在于 **TradingView 官方直连体验更丝滑**，且 **cTrader 账户佣金比 IC Markets 更低（每手 6 美元 vs 7 美元）**；IC Markets 的优势则在于跟单社区（Social Trading）更成熟，可交易的冷门小币种稍微更多一些。
-* **激石 vs Exness**：Exness 胜在极致的自由度（高达无限杠杆、绝大多数品种无隔夜利息、秒级自动出金），极其适合超小资金博弈和黄金日内刷单；而激石则胜在 **真实的 ECN 深度和绝无重复报价（No Re-quotes）**，更适合把外汇当作严肃投资、运行中高频量化 EA 或资金量在 5000 美元以上的严肃交易者。
+* **激石 vs IC Markets**：两者点差与流动性几乎处于同一水平线。但激石的核心优势在于 **TradingView 官方直连体验更丝滑**，且 **cTrader 账户佣金比 IC Markets 更低（每手 6 美元 vs 7 美元）**；IC Markets 的优势则在于跟单社区（Social Trading）更成熟，可交易的冷门小币种稍微更多一些。深入评测可参阅本站的 [IC Markets vs Pepperstone 深度横向实盘对比](https://we.laowei8.com/ic-markets-vs-pepperstone.html)。
+* **激石 vs Exness**：Exness 胜在极致的自由度（高达无限杠杆、绝大多数品种无隔夜利息、秒级自动出金），极其适合超小资金博弈和黄金日内刷单；而激石则胜在 **真实的 ECN 深度和绝无重复报价（No Re-quotes）**，更适合把外汇当作严肃投资、运行中高频量化 EA 或资金量在 5000 美元以上的严肃交易者。需要查阅多平台多维度实时点差大表，可进入 [开户通全球经纪商比价系统](https://we.laowei8.com/compare) 进行实时筛选。
 
 ![Pepperstone激石cTrader深度订单簿与L2买卖盘口实测](https://cdn.jsdelivr.net/gh/jarlin8/fendou.la@c9024be/attachments/pepperstone-review-pepperstone-ctrader.jpg)
 
@@ -140,6 +148,14 @@ review:
 
 1. **极端数据公布瞬间的流动性滑点**：因为激石是真实的 ECN 撮合机制，在美联储决议（FOMC）、美国非农数据（NFP）公布的数秒内，银行间做市商往往会临时撤回浅层挂单。实测在极端行情的瞬间，挂单突破可能会遭遇 1~3 点的滑点，激进型数据刷单客需要设置更宽的滑点容忍度；
 2. **隔夜持仓利息（Swap）成本偏高**：激石并未像某些中东或塞浦路斯平台那样针对普通散户大面积开通黄金无隔夜费（Swap-Free）。如果是持仓数周甚至数月的中长线波段选手，隔夜利息会持续侵蚀利润，该平台更适合日内或短波段了结。
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons">
+<!-- wp:button {"backgroundColor":"primary","textColor":"white","style":{"border":{"radius":"4px"}},"fontSize":"medium"} -->
+<div class="wp-block-button has-custom-font-size has-medium-font-size"><a class="wp-block-button__link wp-element-button has-white-color has-primary-background-color has-text-color has-background" href="https://s.ssgg.net/pepperstone" target="_blank" rel="nofollow noopener">👉 访问激石官网开设真实 / 模拟账户</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
 
 ---
 

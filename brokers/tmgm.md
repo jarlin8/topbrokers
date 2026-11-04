@@ -75,7 +75,15 @@ review:
 | **最低开户入金** | 100 美元 | 100 美元 | 门槛完全一致，无需额外资金加成 |
 | **订单执行架构** | STP 直通式市价执行 | 纯正 ECN 撮合机制 | 直通一级投行流动性池 |
 
-> 💡 **实测算账逻辑**：以主流货币对 EURUSD 为例，Classic 账户平均点差约 1.2 点，每标准手往返交易摩擦成本为 12 美元；而在 EDGE 账户上，平均裸点差按 0.1 点计（1 美元）加上双边 7 美元佣金，总成本仅为 8 美元。交易员每交易一手便能即刻省下 4 美元。对于日内做 3~5 手波段的选手，一年节省的摩擦费用高达数千美元。
+> 💡 **实测算账逻辑**：以主流货币对 EURUSD 为例，Classic 账户平均点差约 1.2 点，每标准手往返交易摩擦成本为 12 美元；而在 EDGE 账户上，平均裸点差按 0.1 点计（1 美元）加上双边 7 美元佣金，总成本仅为 8 美元。交易员每交易一手便能即刻省下 4 美元。对于日内做 3~5 手波段的选手，一年节省的摩擦费用高达数千美元。想比对更多真实 ECN 平台的佣金水平，可阅读本站的 [2026 年 10 大最佳真实 ECN 外汇经纪商对比](https://we.laowei8.com/best-ecn-brokers.html)。
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons">
+<!-- wp:button {"backgroundColor":"primary","textColor":"white","style":{"border":{"radius":"4px"}},"fontSize":"medium"} -->
+<div class="wp-block-button has-custom-font-size has-medium-font-size"><a class="wp-block-button__link wp-element-button has-white-color has-primary-background-color has-text-color has-background" href="https://s.ssgg.net/tmgm" target="_blank" rel="nofollow noopener">👉 访问 TMGM 官方专属通道开设 EDGE 账户</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
 
 ---
 
@@ -101,7 +109,7 @@ TMGM 对 MetaTrader 4 与 MetaTrader 5 的技术适配非常成熟。其服务�
    * **澳大利亚证券和投资委员会（ASIC）**：金融服务牌照（AFSL）号 **436416**（主体：Trademax Australia Limited），可在 [ASIC 官方在线专业注册库](https://connectonline.asic.gov.au/) 实时查证其持牌状态；
    * **新西兰金融市场管理局（FMA）**：牌照号 **FSP 569807**（主体：Trademax Global Markets (NZ) Limited），新西兰金融法治底蕴深厚。
 2. **亚太客户开户实体与杠杆机制**：
-   * 针对华语区在内的国际零售交易员，为了避开澳洲本土对零售杠杆上限仅 1:30 的限制，通常开户接入 **瓦努阿图金融服务委员会（VFSC，金融牌照号 40356）** 监管主体（可在 [瓦努阿图 VFSC 官方注册名录](https://www.vfsc.vu/) 查验），以享受最高 1:500 乃至更高倍数的实盘杠杆；
+   * 针对华语区在内的国际零售交易员，为了避开澳洲本土对零售杠杆上限仅 1:30 的限制，通常开户接入 **瓦努阿图金融服务委员会（VFSC，金融牌照号 40356）** 监管主体（可在 [瓦努阿图 VFSC 官方注册名录](https://www.vfsc.vu/) 查验），以享受最高 1:500 乃至更高倍数的实盘杠杆。关于离岸主体资金安全的防范细节，可参考本站 [外汇交易黑平台辨别与防骗指南](https://we.laowei8.com/last-fake-forex-brokers.html)；
    * **资金物理隔离与商业民事保险**：依据 [TMGM 官方客户资金保护规则](https://www.tmgm.com/)，客户本金完全隔离存放在澳大利亚国民银行（NAB）等国际顶级银行的信托托管账户中，严禁用于平台日常经营周转。此外，TMGM 投保了超额商业民事责任保险，为不可抗力极端风险提供额外缓冲。
 
 ---
@@ -126,7 +134,7 @@ TMGM 对 MetaTrader 4 与 MetaTrader 5 的技术适配非常成熟。其服务�
 很多交易者在澳洲系三强中反复权衡，三者的实盘定位差异如下：
 
 * **TMGM vs 激石（Pepperstone）**：激石的核心优势在于 TradingView 官方直连和 cTrader 的超低佣金；而 TMGM 的胜负手在于 **IRESS 真实股票 DMA 撮合能力更强（超万只股票标的）**，并且在**本地化出入金渠道的稳定性与专属中文客户经理支持力度**上口碑极佳。
-* **TMGM vs 万致（Vantage）**：万致更侧重于高额信用赠金与 ProTrader 图表；而 TMGM 则在 **品牌体育顶级赞助背景（澳网全球合作伙伴）带来的公信力** 以及大资金安全托管方面更具成熟大牌风范。
+* **TMGM vs 万致（Vantage）**：万致更侧重于高额信用赠金与 ProTrader 图表；而 TMGM 则在 **品牌体育顶级赞助背景（澳网全球合作伙伴）带来的公信力** 以及大资金安全托管方面更具成熟大牌风范。若想在网页端一键比对各家平台的实时参数，可移步 [开户通全球经纪商比价系统](https://we.laowei8.com/compare)。
 
 ---
 
@@ -136,6 +144,14 @@ TMGM 对 MetaTrader 4 与 MetaTrader 5 的技术适配非常成熟。其服务�
 
 1. **长期无操作的账户闲置费**：根据 TMGM 官方账户条款，若交易账户连续超过 6 个月没有发生任何交易活动，平台可能会按月扣除一定额度的闲置维护管理费（直到余额归零为止）。因此若是阶段性休息不交易，建议提前将资金转入钱包或全部提出；
 2. **黄金隔夜持仓利息成本**：TMGM 的外汇货币对与现货黄金（XAUUSD）严格按照国际银行间 Swap 汇率计算隔夜利息，做中长线波段多单或空单时均会产生正常的利息收支，不适合期望享受长期“完全免息（Swap-Free）”的非伊斯兰长线持有选手。
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons">
+<!-- wp:button {"backgroundColor":"primary","textColor":"white","style":{"border":{"radius":"4px"}},"fontSize":"medium"} -->
+<div class="wp-block-button has-custom-font-size has-medium-font-size"><a class="wp-block-button__link wp-element-button has-white-color has-primary-background-color has-text-color has-background" href="https://s.ssgg.net/tmgm" target="_blank" rel="nofollow noopener">👉 访问 TMGM 官网开设真实 / 模拟账户</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
 
 ---
 

@@ -24,7 +24,13 @@ topbrokers/
 
 1. **返佣外链规范**：
    * 所有 `external_url` 统一使用短链形式：`https://s.ssgg.net/xxxx`（如 `https://s.ssgg.net/exness`、`https://s.ssgg.net/pepperstone`）。
-2. **REHub 16 大属性必填**：
+2. **站内内链网络构建（SEO 刚性要求）**：
+   * 每篇评测正文必须嵌入 **3~5 个高相关站内内链**，链接到本站的比价大表（`/compare`）、ECN榜单（`/best-ecn-brokers.html`）、小资金榜单（`/brokers-in-small-account.html`）或监管防骗指南（`/fca-details.html`、`/last-fake-forex-brokers.html`），打通全站权重流转。
+3. **文内双节点开户号召（CTA Buttons）**：
+   * 正文内必须设置 **2 处黄金 CTA 节点**（采用 Gutenberg Button Block）：
+     * 节点 1：在“点差与成本算账”章节之后（欲望最强时）；
+     * 节点 2：在全文末尾 FAQ 之前（总结陈词完毕后）。
+4. **REHub 16 大属性必填**：
    * 注册地、监管机构、成立时间、经营模式、最低入金、入金方式、出金优惠、**主要点差（必须写具体数值，如黄金 1.2 欧美 0.8）**、点差类型、交易品种、交易软件、最大杠杆、最小头寸、爆仓比例、可锁仓？、剥头皮？。
 3. **内容去 AI 味**：
    * 采用全职交易员实盘视角，客观不盲目吹捧，必须明确列出 1~2 条真实缺点（Cons）以建立公信力。

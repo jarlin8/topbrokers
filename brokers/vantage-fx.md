@@ -75,7 +75,15 @@ review:
 | **最低入金要求** | 50 美元 | 50 美元 | 门槛完全一致，无额外溢价 |
 | **执行机制** | STP  прям 直通市场 | 纯正 ECN 撮合机制 | 直连一级投行流动性池 |
 
-> 💡 **实测算账逻辑**：很多新手以为“0 佣金”的标准账户更便宜，这是典型的心理误区。标准账户欧美平均点差 1.3 点，一手往返交易成本就是 13 美元；而在 Raw ECN 账户上，欧美平均点差按 0.1 点计（1 美元）加上双边 6 美元固定佣金，综合成本每手仅 7 美元。每做一手直接净省 6 美元，日内短线交易者一个月跑 20 手就能省下一顿大餐。
+> 💡 **实测算账逻辑**：很多新手以为“0 佣金”的标准账户更便宜，这是典型的心理误区。标准账户欧美平均点差 1.3 点，一手往返交易成本就是 13 美元；而在 Raw ECN 账户上，欧美平均点差按 0.1 点计（1 美元）加上双边 6 美元固定佣金，综合成本每手仅 7 美元。每做一手直接净省 6 美元，日内短线交易者一个月跑 20 手就能省下一顿大餐。若想评估更多小资金门槛的经纪商，可参考本站的 [2026 年 7 家小资金外汇平台推荐](https://we.laowei8.com/brokers-in-small-account.html)。
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons">
+<!-- wp:button {"backgroundColor":"primary","textColor":"white","style":{"border":{"radius":"4px"}},"fontSize":"medium"} -->
+<div class="wp-block-button has-custom-font-size has-medium-font-size"><a class="wp-block-button__link wp-element-button has-white-color has-primary-background-color has-text-color has-background" href="https://s.ssgg.net/vs" target="_blank" rel="nofollow noopener">👉 访问万致官方专属通道开设 Raw ECN 账户</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
 
 ---
 
@@ -102,7 +110,7 @@ review:
 
 1. **核心一线官方监管公示**：
    * **澳大利亚证券与投资委员会（ASIC）**：执照号 **428901**（主体：Vantage Global Prime Pty Ltd），可在 [ASIC 官方在线登记系统](https://connectonline.asic.gov.au/) 实时验证其十余年合规资质；
-   * **英国金融行为监管局（FCA）**：执照号 **590299**（主体：Vantage Global Prime LLP），可在 [英国 FCA 官方金融服务注册网](https://register.fca.org.uk/) 查验最高合规权限；
+   * **英国金融行为监管局（FCA）**：执照号 **590299**（主体：Vantage Global Prime LLP），可在 [英国 FCA 官方金融服务注册网](https://register.fca.org.uk/) 查验最高合规权限。关于如何穿透海外监管防范套牌，可参阅 [FCA 牌照防骗与黑平台识别指南](https://we.laowei8.com/fca-details.html)；
    * **开曼群岛金融管理局（CIMA）**：牌照号 **1383491**（主体：Vantage International Group Limited），可在 [开曼 CIMA 官方名录](https://www.cima.ky/) 验证。
 2. **离岸实体运作与杠杆说明**：
    * 针对华语区和亚太非属地零售客户，为了提供高达 1:500 的交易杠杆与灵活的促销政策，账户通常开立在开曼 CIMA 或 VFSC 离岸实体下；
@@ -129,8 +137,8 @@ review:
 
 在当前零售外汇市场中，很多交易员常常在这三家之间摇摆不定：
 
-* **万致 vs 激石（Pepperstone）**：激石更加专注在纯粹的 ECN 执行手感，cTrader 佣金略具优势；而万致的优势在于**起存门槛更低（50 美元 vs 200 美元）**、拥有丰富的入金赠金活动，并且自带社交跟单 App，更适合喜欢多重福利与跟单的交易者。
-* **万致 vs Exness**：Exness 拥有无限杠杆与广泛的无隔夜利息特权，在黄金日内超短线上无出其右；但万致在 **美股与指数 CFD 品种丰富度、ProTrader 图表集成度** 上表现更全面，整体费率更为均衡透明。
+* **万致 vs 激石（Pepperstone）**：激石更加专注在纯粹的 ECN 执行手感，cTrader 佣金略具优势；而万致的优势在于**起存门槛更低（50 美元 vs 200 美元）**、拥有丰富的入金赠金活动，并且自带社交跟单 App，更适合喜欢多重福利与跟单的交易者。详细横评可阅读本站 [2026 年 10 大最佳真实 ECN 外汇经纪商对比](https://we.laowei8.com/best-ecn-brokers.html)。
+* **万致 vs Exness**：Exness 拥有无限杠杆与广泛的无隔夜利息特权，在黄金日内超短线上无出其右；但万致在 **美股与指数 CFD 品种丰富度、ProTrader 图表集成度** 上表现更全面，整体费率更为均衡透明。如果想横向比对各平台点差与杠杆细则，可移步 [开户通全球经纪商比价系统](https://we.laowei8.com/compare)。
 
 ---
 
@@ -140,6 +148,14 @@ review:
 
 1. **赠金提现的手续量条款**：万致经常推出 20%~50% 的信用赠金活动，这种赠金主要用于扩大抗风险净值，**不能直接提取现金**。如果想要将赠金转化为可用资金，通常需要完成极为苛刻的交易手数要求（如每交易一定手数释放部分金额），切勿盲目为了刷赠金而过度频繁开仓；
 2. **清淡时段流动性点差拉宽**：在纽约夏令时下午 5 点（北京时间清晨换日结算前后半小时）以及重大节假日期间，由于做市流动性偏薄，黄金与主要交叉盘点差可能会短暂扩大至平时的 2~3 倍，持仓过夜时务必预留充裕的保证金避免被瞬间打掉止损。
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons">
+<!-- wp:button {"backgroundColor":"primary","textColor":"white","style":{"border":{"radius":"4px"}},"fontSize":"medium"} -->
+<div class="wp-block-button has-custom-font-size has-medium-font-size"><a class="wp-block-button__link wp-element-button has-white-color has-primary-background-color has-text-color has-background" href="https://s.ssgg.net/vs" target="_blank" rel="nofollow noopener">👉 访问万致官网开设真实 / 模拟账户</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
 
 ---
 
