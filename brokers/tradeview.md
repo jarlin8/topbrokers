@@ -61,7 +61,7 @@ review:
 
 Tradeview 的立身之本非常纯粹：**将机构级真实 ECN 撮合与深厚流动性做到极致**。通过其王牌产品 **ILC（Innovative Liquidity Connector 创新流动性连接器）账户**，Tradeview 不仅将欧美主流货币对的买卖差价常态化压低至 **0.0 点**，更将每标准手的双边交易佣金锁定在惊人的 **5 美元（单边仅 2.5 美元）**，比 IC Markets 等平台还要便宜近 30%，成为当之无愧的真实银行间低成本执行标杆。
 
-![Tradeview官方网站首页](https://cdn.jsdelivr.net/gh/jarlin8/fendou.la@ab8ebc9/attachments/tradeview.png)
+![Tradeview官方网站首页](https://cdn.jsdelivr.net/gh/jarlin8/topbrokers@6ff8b17/attachments/tradeview.png)
 
 ---
 
