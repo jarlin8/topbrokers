@@ -57,14 +57,14 @@ review:
   cons:
   - 杠杆有些高
   criteria:
-  - review_post_name: 监管
-    review_post_score: '8.5'
-  - review_post_name: 杠杆倍数
-    review_post_score: '9.5'
-  - review_post_name: 出入金速度
-    review_post_score: '9'
-  - review_post_name: 交易流畅度
-    review_post_score: '9'
+  - name: 监管
+    score: 8.5
+  - name: 杠杆倍数
+    score: 9.5
+  - name: 出入金速度
+    score: 9.0
+  - name: 交易流畅度
+    score: 9.0
 ---
 
 ### FCA 英国全牌照做市商（MM）

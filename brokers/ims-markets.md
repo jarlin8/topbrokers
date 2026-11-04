@@ -1,0 +1,48 @@
+---
+id: 29541
+name: IMS Markets
+slug: ims-markets
+status: publish
+type: external
+external_url: https://s.ssgg.net/vs
+button_text: 官网开户
+seo:
+  focus_keyword: IMS Markets
+  title: IMS Markets测评 %currentyear% 开户必看 %sep% %sitename%
+  description: ''
+attributes:
+  成立时间: 2019年
+  经营模式: STP
+  监管机构: CySEC STP直通式牌照
+  注册地: 塞浦路斯
+  最低入金: 50美元
+  入金方式: 银行电汇、信用卡、SKRILL、NETELLER
+  出金优惠: 入金方式多,最小1美金即可出金
+  点差类型: 浮动点差
+  可锁仓?: 允许
+  剥头皮?: 允许
+  最大杠杆: '100'
+  爆仓比例: 100%
+  最小头寸: 0.01手
+  交易品种: 外汇,大宗商品,指数,贵金属
+  交易软件: MT5
+review:
+  overall_score: 6.6
+  heading: 暂无
+  pros:
+  - 2019年成立
+  - CySEC STP直通式牌照
+  - 50美元最低入金
+  cons:
+  - 不接受美国客户
+  criteria: []
+---
+
+* 服务器时区: GMT+3
+  * 官网网址: <https://www.imsmarkets.com/>
+  * 支持邮箱: [info@imsmarkets.com](mailto:info@imsmarkets.com)
+  * 服务电话: --
+
+
+
+## 开户通推荐TOP5
