@@ -108,13 +108,17 @@ review:
 
 在选择任何海外交易商前，查验监管主体是不可逾越的底线。万致在合规底牌上配置较为全面：
 
-1. **核心一线官方监管公示**：
-   * **澳大利亚证券与投资委员会（ASIC）**：执照号 **428901**（主体：Vantage Global Prime Pty Ltd），可在 [ASIC 官方在线登记系统](https://connectonline.asic.gov.au/) 实时验证其十余年合规资质；
-   * **英国金融行为监管局（FCA）**：执照号 **590299**（主体：Vantage Global Prime LLP），可在 [英国 FCA 官方金融服务注册网](https://register.fca.org.uk/) 查验最高合规权限。关于如何穿透海外监管防范套牌，可参阅 [FCA 牌照防骗与黑平台识别指南](https://we.laowei8.com/fca-details.html)；
-   * **开曼群岛金融管理局（CIMA）**：牌照号 **1383491**（主体：Vantage International Group Limited），可在 [开曼 CIMA 官方名录](https://www.cima.ky/) 验证。
-2. **离岸实体运作与杠杆说明**：
-   * 针对华语区和亚太非属地零售客户，为了提供高达 1:500 的交易杠杆与灵活的促销政策，账户通常开立在开曼 CIMA 或 VFSC 离岸实体下；
-   * **资金物理隔离与商业保险**：客户入金独立存放在澳洲国民银行（NAB）等一级银行的信托隔离账户。此外，万致通过国际知名经纪公司 Willis Towers Watson（WTW）安排了由**伦敦劳合社（Lloyd's of London）**承保的高达 5,000 万美元超额民事责任保险，为平台极端风险筑起了一道额外的防护堤。
+### 澳洲 ASIC 与英国 FCA 双重一线监管查验
+
+* **澳大利亚证券与投资委员会（ASIC）**：执照号 **428901**（主体：Vantage Global Prime Pty Ltd），可在 [ASIC 官方在线登记系统](https://connectonline.asic.gov.au/) 实时验证其十余年合规资质；
+* **英国金融行为监管局（FCA）**：执照号 **590299**（主体：Vantage Global Prime LLP），可在 [英国 FCA 官方金融服务注册网](https://register.fca.org.uk/) 查验最高合规权限。关于如何穿透海外监管防范套牌，可参阅 [FCA 牌照防骗与黑平台识别指南](https://we.laowei8.com/fca-details.html)；
+* **开曼群岛金融管理局（CIMA）**：牌照号 **1383491**（主体：Vantage International Group Limited），可在 [开曼 CIMA 官方名录](https://www.cima.ky/) 验证。
+
+### 亚太客户开户实体与 5,000 万美元商业民事险
+
+针对华语区和亚太非属地零售客户，为了提供高达 1:500 的交易杠杆与灵活的促销政策，账户通常开立在开曼 CIMA 或 VFSC 离岸实体下。
+
+在资金保障层面，客户入金独立存放在澳洲国民银行（NAB）等一级商业银行的信托隔离账户。此外，万致通过国际知名经纪公司 Willis Towers Watson（WTW）安排了由**伦敦劳合社（Lloyd's of London）**承保的高达 5,000 万美元超额民事责任保险，为平台极端风险筑起了一道额外的防护堤。
 
 ---
 
