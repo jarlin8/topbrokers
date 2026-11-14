@@ -77,132 +77,187 @@ def parse_markdown_file(file_path):
     meta = yaml.safe_load(frontmatter_raw)
     return meta, body_markdown
 
-def normalize_rank_math_faq(block):
-    """将 Rank Math FAQ Block 标准化为现代 Gutenberg 校验格式，杜绝后台 Block 报错"""
-    m = re.match(r'<!-- wp:rank-math/faq-block\s+(\{.*?\})\s*-->', block, re.DOTALL)
-    if not m:
-        return block
-    try:
-        data = json.loads(m.group(1))
-        questions = data.get('questions', [])
-        items_html = []
-        for q in questions:
-            title = q.get('title', '')
-            content = q.get('content', '')
-            items_html.append(f'<div class="rank-math-faq-item"><h3 class="rank-math-question">{title}</h3><div class="rank-math-answer">{content}</div></div>')
-        return f'<!-- wp:rank-math/faq-block {json.dumps(data, ensure_ascii=False)} -->\n<div class="wp-block-rank-math-faq-block rank-math-block">' + ''.join(items_html) + '</div>\n<!-- /wp:rank-math/faq-block -->'
-    except Exception:
-        return block
-
-def normalize_button_block(block):
-    """将 Button Block 标准化为 Gutenberg 完全匹配的 class 与 style 属性，杜绝验证报错"""
-    def replace_btn(m):
-        btn_body = m.group(0)
-        link_m = re.search(r'href="([^"]+)"[^>]*>(.*?)</a>', btn_body)
-        if not link_m:
-            return btn_body
-        href = link_m.group(1)
-        text = link_m.group(2).strip()
-        return (
-            '<!-- wp:button {"backgroundColor":"primary","textColor":"white","style":{"border":{"radius":"4px"}},"fontSize":"medium"} -->\n'
-            '<div class="wp-block-button has-custom-font-size has-medium-font-size">'
-            f'<a class="wp-block-button__link has-white-color has-primary-background-color has-text-color has-background has-medium-font-size has-custom-font-size wp-element-button" href="{href}" style="border-radius:4px" target="_blank" rel="nofollow noopener">{text}</a>'
-            '</div>\n'
-            '<!-- /wp:button -->'
-        )
-    return re.sub(r'<!-- wp:button\b.*?-->.*?<!-- /wp:button -->', replace_btn, block, flags=re.DOTALL)
-
 def markdown_to_gutenberg_blocks(md_text):
     """
-    将 Markdown 文本严格解析为 WordPress 原生 Gutenberg Blocks 结构，
-    确保段落、标题、列表、表格和 Rank Math FAQ Block 完全按原生 Block 渲染并 100% 通过验证。
+    通过确定性状态机将 Markdown 文本严格解析为 WordPress 原生 Gutenberg Blocks 结构。
+    逐行处理，彻底规避因正则切分导致的表格撕裂、按钮标签错乱与段落遗漏问题，确保后台 100% 验证通过。
     """
     # 替换特殊货币符号避免被解析器忽略
-    protected_md = md_text.replace("$", "美元 ")
-    
-    # 1. 规范化：确保每个以 # 开头的标题前后都有空行，防止随后的段落因单换行粘连被漏掉
-    protected_md = re.sub(r'([^\n])\n(#{1,6}\s+[^\n]+)', r'\1\n\n\2', protected_md)
-    protected_md = re.sub(r'^(#{1,6}\s+[^\n]+)\n([^\n#])', r'\1\n\n\2', protected_md, flags=re.MULTILINE)
+    md_text = md_text.replace("$", "美元 ")
+    lines = md_text.splitlines()
+    blocks = []
+    i = 0
+    n = len(lines)
 
-    # 2. 规范化：确保无序列表和有序列表前后都有空行
-    protected_md = re.sub(r'([^\n])\n([*\-]\s+[^\n]+)', r'\1\n\n\2', protected_md)
-    protected_md = re.sub(r'([*\-]\s+[^\n]+)\n([^*\-\n\s])', r'\1\n\n\2', protected_md)
-    protected_md = re.sub(r'([^\n])\n(\d+\.\s+[^\n]+)', r'\1\n\n\2', protected_md)
-    protected_md = re.sub(r'(\d+\.\s+[^\n]+)\n([^\d\.\n\s])', r'\1\n\n\2', protected_md)
-    
-    # 保护已存在的 Gutenberg Block 注释（如 Rank Math FAQ block、按钮组）
-    wp_pattern = re.compile(r'(<!-- wp:[a-z0-9\-\/]+.*?-->.*?<!-- /wp:[a-z0-9\-\/]+ -->)', re.DOTALL)
-    parts = wp_pattern.split(protected_md)
-    output_blocks = []
+    while i < n:
+        line = lines[i]
+        stripped = line.strip()
 
-    for part in parts:
-        part = part.strip()
-        if not part:
+        # 1. 空行跳过
+        if not stripped:
+            i += 1
             continue
-        if part.startswith("<!-- wp:"):
-            # 针对 Rank Math FAQ Block 和 Button Block 做 100% Gutenberg 校验标准化
-            if "wp:rank-math/faq-block" in part:
-                output_blocks.append(normalize_rank_math_faq(part))
-            elif "wp:button" in part:
-                output_blocks.append(normalize_button_block(part))
-            else:
-                output_blocks.append(part)
-        else:
-            # 切分普通 Markdown 块（按双换行切分）
-            chunks = [c.strip() for c in re.split(r'\n{2,}', part) if c.strip()]
-            for chunk in chunks:
-                if chunk.startswith("---") or chunk == "***":
-                    output_blocks.append('<!-- wp:separator -->\n<hr class="wp-block-separator has-alpha-channel-opacity"/>\n<!-- /wp:separator -->')
-                elif chunk.startswith("#"):
-                    m = re.match(r'^(#{1,6})\s+(.*)$', chunk, re.DOTALL)
-                    if m:
-                        level = len(m.group(1))
-                        # 若 chunk 内部有换行，首行为标题，剩余为后续内容
-                        lines = chunk.split('\n')
-                        first_line = lines[0]
-                        hm = re.match(r'^(#{1,6})\s+(.*)$', first_line)
-                        htext = hm.group(2).strip() if hm else first_line.lstrip('#').strip()
-                        output_blocks.append(f'<!-- wp:heading {{"level":{level}}} -->\n<h{level} class="wp-block-heading">{htext}</h{level}>\n<!-- /wp:heading -->')
-                        
-                        rest = '\n'.join(lines[1:]).strip()
-                        if rest:
-                            # 递归处理标题下粘连的剩余文本
-                            output_blocks.append(markdown_to_gutenberg_blocks(rest))
-                elif chunk.startswith("![") and "](" in chunk:
-                    # 原生 Gutenberg Image Block
-                    m = re.match(r'^!\[(.*?)\]\((.*?)\)$', chunk)
-                    if m:
-                        alt = m.group(1).strip()
-                        src = m.group(2).strip()
-                        output_blocks.append(f'<!-- wp:image {{"sizeSlug":"large","linkDestination":"none"}} -->\n<figure class="wp-block-image size-large"><img src="{src}" alt="{alt}"/><figcaption class="wp-element-caption">{alt}</figcaption></figure>\n<!-- /wp:image -->')
-                elif chunk.startswith("|") and "|" in chunk:
-                    # 表格 Block：移除内联 style 并添加 has-fixed-layout，确保 Gutenberg 校验完全通过
-                    table_html = markdown.markdown(chunk, extensions=['tables'])
-                    table_html = re.sub(r'\s*style="[^"]*"', '', table_html)
-                    table_html = table_html.replace('<table>', '<table class="has-fixed-layout">')
-                    table_html = re.sub(r'>\s+<', '><', table_html).strip()
-                    output_blocks.append(f'<!-- wp:table -->\n<figure class="wp-block-table">{table_html}</figure>\n<!-- /wp:table -->')
-                elif chunk.startswith("- ") or chunk.startswith("* "):
-                    # 无序列表 Block
-                    list_html = markdown.markdown(chunk).strip()
-                    output_blocks.append(f'<!-- wp:list -->\n{list_html}\n<!-- /wp:list -->')
-                elif re.match(r'^\d+\.\s+', chunk):
-                    # 有序列表 Block
-                    list_html = markdown.markdown(chunk).strip()
-                    output_blocks.append(f'<!-- wp:list {{"ordered":true}} -->\n{list_html}\n<!-- /wp:list -->')
-                elif chunk.startswith(">"):
-                    # 引用 Block
-                    q_text = re.sub(r'^>\s?', '', chunk, flags=re.MULTILINE).strip()
-                    q_html = markdown.markdown(q_text).strip()
-                    output_blocks.append(f'<!-- wp:quote -->\n<blockquote class="wp-block-quote">{q_html}</blockquote>\n<!-- /wp:quote -->')
-                else:
-                    # 普通段落 Block
-                    p_html = markdown.markdown(chunk).strip()
-                    if p_html.startswith("<p>") and p_html.endswith("</p>"):
-                        p_html = p_html[3:-4].strip()
-                    output_blocks.append(f'<!-- wp:paragraph -->\n<p>{p_html}</p>\n<!-- /wp:paragraph -->')
 
-    return '\n\n'.join(output_blocks)
+        # 2. 原生 Gutenberg 按钮组块（完整提取，防止内部 wp:button 被截断）
+        if stripped.startswith("<!-- wp:buttons"):
+            btn_lines = [line]
+            i += 1
+            while i < n and "<!-- /wp:buttons -->" not in lines[i]:
+                btn_lines.append(lines[i])
+                i += 1
+            if i < n:
+                btn_lines.append(lines[i])
+                i += 1
+            full_btn = "\n".join(btn_lines)
+            m = re.search(r'href="([^"]+)"[^>]*>(.*?)</a>', full_btn)
+            if m:
+                href = m.group(1)
+                text = m.group(2).strip()
+                normalized = (
+                    '<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->\n'
+                    '<div class="wp-block-buttons">\n'
+                    '<!-- wp:button {"backgroundColor":"primary","textColor":"white","style":{"border":{"radius":"4px"}},"fontSize":"medium"} -->\n'
+                    f'<div class="wp-block-button has-custom-font-size has-medium-font-size"><a class="wp-block-button__link has-white-color has-primary-background-color has-text-color has-background has-medium-font-size has-custom-font-size wp-element-button" href="{href}" style="border-radius:4px" target="_blank" rel="nofollow noopener">{text}</a></div>\n'
+                    '<!-- /wp:button -->\n'
+                    '</div>\n'
+                    '<!-- /wp:buttons -->'
+                )
+                blocks.append(normalized)
+            else:
+                blocks.append(full_btn)
+            continue
+
+        # 3. 原生 Rank Math FAQ 块（完整提取并标准化为官方最新保存格式）
+        if stripped.startswith("<!-- wp:rank-math/faq-block"):
+            faq_lines = [line]
+            i += 1
+            while i < n and "<!-- /wp:rank-math/faq-block -->" not in lines[i]:
+                faq_lines.append(lines[i])
+                i += 1
+            if i < n:
+                faq_lines.append(lines[i])
+                i += 1
+            full_faq = "\n".join(faq_lines)
+            m = re.match(r'<!-- wp:rank-math/faq-block\s+(\{.*?\})\s*-->', full_faq, re.DOTALL)
+            if m:
+                try:
+                    data = json.loads(m.group(1))
+                    questions = data.get("questions", [])
+                    items_html = []
+                    for q in questions:
+                        items_html.append(f'<div class="rank-math-faq-item"><h3 class="rank-math-question">{q["title"]}</h3><div class="rank-math-answer">{q["content"]}</div></div>')
+                    blocks.append(f'<!-- wp:rank-math/faq-block {json.dumps(data, ensure_ascii=False)} -->\n<div class="wp-block-rank-math-faq-block rank-math-block">' + ''.join(items_html) + '</div>\n<!-- /wp:rank-math/faq-block -->')
+                    continue
+                except Exception:
+                    pass
+            blocks.append(full_faq)
+            continue
+
+        # 4. 其他任何 <!-- wp: 块
+        if stripped.startswith("<!-- wp:"):
+            raw_lines = [line]
+            parts = stripped.split()
+            end_tag = parts[1].replace("wp:", "/wp:") if len(parts) > 1 else "-->"
+            i += 1
+            while i < n and f"<!-- {end_tag} -->" not in lines[i]:
+                raw_lines.append(lines[i])
+                i += 1
+            if i < n:
+                raw_lines.append(lines[i])
+                i += 1
+            blocks.append("\n".join(raw_lines))
+            continue
+
+        # 5. 分割线
+        if stripped in ("---", "***", "___"):
+            blocks.append('<!-- wp:separator -->\n<hr class="wp-block-separator has-alpha-channel-opacity"/>\n<!-- /wp:separator -->')
+            i += 1
+            continue
+
+        # 6. 标题 (#, ##, ###...)
+        hm = re.match(r'^(#{1,6})\s+(.*)$', stripped)
+        if hm:
+            level = len(hm.group(1))
+            htext = hm.group(2).strip()
+            blocks.append(f'<!-- wp:heading {{"level":{level}}} -->\n<h{level} class="wp-block-heading">{htext}</h{level}>\n<!-- /wp:heading -->')
+            i += 1
+            continue
+
+        # 7. 图片 (![alt](src))
+        im = re.match(r'^!\[(.*?)\]\((.*?)\)$', stripped)
+        if im:
+            alt = im.group(1).strip()
+            src = im.group(2).strip()
+            blocks.append(f'<!-- wp:image {{"sizeSlug":"large","linkDestination":"none"}} -->\n<figure class="wp-block-image size-large"><img src="{src}" alt="{alt}"/><figcaption class="wp-element-caption">{alt}</figcaption></figure>\n<!-- /wp:image -->')
+            i += 1
+            continue
+
+        # 8. 表格 (完整收集从首行 | 到末行 | 的全部行，作为单个表格统一处理)
+        if stripped.startswith("|"):
+            tbl_lines = [stripped]
+            i += 1
+            while i < n and lines[i].strip().startswith("|"):
+                tbl_lines.append(lines[i].strip())
+                i += 1
+            table_md = "\n".join(tbl_lines)
+            thtml = markdown.markdown(table_md, extensions=['tables'])
+            thtml = re.sub(r'\s*style="[^"]*"', '', thtml)
+            thtml = thtml.replace('<table>', '<table class="has-fixed-layout">')
+            thtml = re.sub(r'>\s+<', '><', thtml).strip()
+            blocks.append(f'<!-- wp:table -->\n<figure class="wp-block-table">{thtml}</figure>\n<!-- /wp:table -->')
+            continue
+
+        # 9. 引用 (以 > 开头)
+        if stripped.startswith(">"):
+            q_lines = [re.sub(r'^>\s?', '', stripped)]
+            i += 1
+            while i < n and lines[i].strip().startswith(">"):
+                q_lines.append(re.sub(r'^>\s?', '', lines[i].strip()))
+                i += 1
+            q_html = markdown.markdown("\n".join(q_lines)).strip()
+            blocks.append(f'<!-- wp:quote -->\n<blockquote class="wp-block-quote">{q_html}</blockquote>\n<!-- /wp:quote -->')
+            continue
+
+        # 10. 无序列表 (以 * 或 - 开头)
+        if stripped.startswith("* ") or stripped.startswith("- "):
+            list_lines = [line]
+            i += 1
+            while i < n and (lines[i].strip().startswith("* ") or lines[i].strip().startswith("- ") or (lines[i].startswith("  ") and lines[i].strip())):
+                list_lines.append(lines[i])
+                i += 1
+            l_html = markdown.markdown("\n".join(list_lines)).strip()
+            blocks.append(f'<!-- wp:list -->\n{l_html}\n<!-- /wp:list -->')
+            continue
+
+        # 11. 有序列表 (以 1. 2. 开头)
+        if re.match(r'^\d+\.\s+', stripped):
+            list_lines = [line]
+            i += 1
+            while i < n and (re.match(r'^\d+\.\s+', lines[i].strip()) or (lines[i].startswith("  ") and lines[i].strip())):
+                list_lines.append(lines[i])
+                i += 1
+            l_html = markdown.markdown("\n".join(list_lines)).strip()
+            blocks.append(f'<!-- wp:list {{"ordered":true}} -->\n{l_html}\n<!-- /wp:list -->')
+            continue
+
+        # 12. 普通段落 (收集连续普通行直到空行或结构标记)
+        p_lines = [line]
+        i += 1
+        while i < n:
+            next_s = lines[i].strip()
+            if not next_s:
+                break
+            if next_s.startswith("#") or next_s.startswith("|") or next_s.startswith(">") or next_s.startswith("<!--") or next_s in ("---", "***") or next_s.startswith("* ") or next_s.startswith("- ") or re.match(r'^\d+\.\s+', next_s) or next_s.startswith("!["):
+                break
+            p_lines.append(lines[i])
+            i += 1
+        p_md = "\n".join(p_lines)
+        p_html = markdown.markdown(p_md).strip()
+        if p_html.startswith("<p>") and p_html.endswith("</p>"):
+            p_html = p_html[3:-4].strip()
+        blocks.append(f'<!-- wp:paragraph -->\n<p>{p_html}</p>\n<!-- /wp:paragraph -->')
+
+    return '\n\n'.join(blocks)
 
 def build_product_payload(meta):
     """组装 WooCommerce 产品属性、外链及 Meta 数据"""
