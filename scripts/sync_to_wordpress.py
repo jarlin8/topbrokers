@@ -77,18 +77,60 @@ def parse_markdown_file(file_path):
     meta = yaml.safe_load(frontmatter_raw)
     return meta, body_markdown
 
+def normalize_rank_math_faq(block):
+    """将 Rank Math FAQ Block 标准化为现代 Gutenberg 校验格式，杜绝后台 Block 报错"""
+    m = re.match(r'<!-- wp:rank-math/faq-block\s+(\{.*?\})\s*-->', block, re.DOTALL)
+    if not m:
+        return block
+    try:
+        data = json.loads(m.group(1))
+        questions = data.get('questions', [])
+        items_html = []
+        for q in questions:
+            title = q.get('title', '')
+            content = q.get('content', '')
+            items_html.append(f'<div class="rank-math-faq-item"><h3 class="rank-math-question">{title}</h3><div class="rank-math-answer">{content}</div></div>')
+        return f'<!-- wp:rank-math/faq-block {json.dumps(data, ensure_ascii=False)} -->\n<div class="wp-block-rank-math-faq-block rank-math-block">' + ''.join(items_html) + '</div>\n<!-- /wp:rank-math/faq-block -->'
+    except Exception:
+        return block
+
+def normalize_button_block(block):
+    """将 Button Block 标准化为 Gutenberg 完全匹配的 class 与 style 属性，杜绝验证报错"""
+    def replace_btn(m):
+        btn_body = m.group(0)
+        link_m = re.search(r'href="([^"]+)"[^>]*>(.*?)</a>', btn_body)
+        if not link_m:
+            return btn_body
+        href = link_m.group(1)
+        text = link_m.group(2).strip()
+        return (
+            '<!-- wp:button {"backgroundColor":"primary","textColor":"white","style":{"border":{"radius":"4px"}},"fontSize":"medium"} -->\n'
+            '<div class="wp-block-button has-custom-font-size has-medium-font-size">'
+            f'<a class="wp-block-button__link has-white-color has-primary-background-color has-text-color has-background has-medium-font-size has-custom-font-size wp-element-button" href="{href}" style="border-radius:4px" target="_blank" rel="nofollow noopener">{text}</a>'
+            '</div>\n'
+            '<!-- /wp:button -->'
+        )
+    return re.sub(r'<!-- wp:button\b.*?-->.*?<!-- /wp:button -->', replace_btn, block, flags=re.DOTALL)
+
 def markdown_to_gutenberg_blocks(md_text):
     """
     将 Markdown 文本严格解析为 WordPress 原生 Gutenberg Blocks 结构，
-    确保段落、标题、列表、表格和 Rank Math FAQ Block 完全按原生 Block 渲染。
+    确保段落、标题、列表、表格和 Rank Math FAQ Block 完全按原生 Block 渲染并 100% 通过验证。
     """
     # 替换特殊货币符号避免被解析器忽略
     protected_md = md_text.replace("$", "美元 ")
     
-    # 规范化：确保每个以 # 开头的标题后都有空行，防止随后的段落因单换行粘连被漏掉
-    protected_md = re.sub(r'^(#{1,6}\s+[^\n]+)\n(?!\n)', r'\1\n\n', protected_md, flags=re.MULTILINE)
+    # 1. 规范化：确保每个以 # 开头的标题前后都有空行，防止随后的段落因单换行粘连被漏掉
+    protected_md = re.sub(r'([^\n])\n(#{1,6}\s+[^\n]+)', r'\1\n\n\2', protected_md)
+    protected_md = re.sub(r'^(#{1,6}\s+[^\n]+)\n([^\n#])', r'\1\n\n\2', protected_md, flags=re.MULTILINE)
+
+    # 2. 规范化：确保无序列表和有序列表前后都有空行
+    protected_md = re.sub(r'([^\n])\n([*\-]\s+[^\n]+)', r'\1\n\n\2', protected_md)
+    protected_md = re.sub(r'([*\-]\s+[^\n]+)\n([^*\-\n\s])', r'\1\n\n\2', protected_md)
+    protected_md = re.sub(r'([^\n])\n(\d+\.\s+[^\n]+)', r'\1\n\n\2', protected_md)
+    protected_md = re.sub(r'(\d+\.\s+[^\n]+)\n([^\d\.\n\s])', r'\1\n\n\2', protected_md)
     
-    # 保护已存在的 Gutenberg Block 注释（如 Rank Math FAQ block）
+    # 保护已存在的 Gutenberg Block 注释（如 Rank Math FAQ block、按钮组）
     wp_pattern = re.compile(r'(<!-- wp:[a-z0-9\-\/]+.*?-->.*?<!-- /wp:[a-z0-9\-\/]+ -->)', re.DOTALL)
     parts = wp_pattern.split(protected_md)
     output_blocks = []
@@ -98,8 +140,13 @@ def markdown_to_gutenberg_blocks(md_text):
         if not part:
             continue
         if part.startswith("<!-- wp:"):
-            # 已经是合法的 Gutenberg Block，直接保留
-            output_blocks.append(part)
+            # 针对 Rank Math FAQ Block 和 Button Block 做 100% Gutenberg 校验标准化
+            if "wp:rank-math/faq-block" in part:
+                output_blocks.append(normalize_rank_math_faq(part))
+            elif "wp:button" in part:
+                output_blocks.append(normalize_button_block(part))
+            else:
+                output_blocks.append(part)
         else:
             # 切分普通 Markdown 块（按双换行切分）
             chunks = [c.strip() for c in re.split(r'\n{2,}', part) if c.strip()]
@@ -107,11 +154,20 @@ def markdown_to_gutenberg_blocks(md_text):
                 if chunk.startswith("---") or chunk == "***":
                     output_blocks.append('<!-- wp:separator -->\n<hr class="wp-block-separator has-alpha-channel-opacity"/>\n<!-- /wp:separator -->')
                 elif chunk.startswith("#"):
-                    m = re.match(r'^(#{1,6})\s+(.*)$', chunk)
+                    m = re.match(r'^(#{1,6})\s+(.*)$', chunk, re.DOTALL)
                     if m:
                         level = len(m.group(1))
-                        htext = m.group(2).strip()
+                        # 若 chunk 内部有换行，首行为标题，剩余为后续内容
+                        lines = chunk.split('\n')
+                        first_line = lines[0]
+                        hm = re.match(r'^(#{1,6})\s+(.*)$', first_line)
+                        htext = hm.group(2).strip() if hm else first_line.lstrip('#').strip()
                         output_blocks.append(f'<!-- wp:heading {{"level":{level}}} -->\n<h{level} class="wp-block-heading">{htext}</h{level}>\n<!-- /wp:heading -->')
+                        
+                        rest = '\n'.join(lines[1:]).strip()
+                        if rest:
+                            # 递归处理标题下粘连的剩余文本
+                            output_blocks.append(markdown_to_gutenberg_blocks(rest))
                 elif chunk.startswith("![") and "](" in chunk:
                     # 原生 Gutenberg Image Block
                     m = re.match(r'^!\[(.*?)\]\((.*?)\)$', chunk)
@@ -120,10 +176,11 @@ def markdown_to_gutenberg_blocks(md_text):
                         src = m.group(2).strip()
                         output_blocks.append(f'<!-- wp:image {{"sizeSlug":"large","linkDestination":"none"}} -->\n<figure class="wp-block-image size-large"><img src="{src}" alt="{alt}"/><figcaption class="wp-element-caption">{alt}</figcaption></figure>\n<!-- /wp:image -->')
                 elif chunk.startswith("|") and "|" in chunk:
-                    # 表格 Block
+                    # 表格 Block：移除内联 style 并添加 has-fixed-layout，确保 Gutenberg 校验完全通过
                     table_html = markdown.markdown(chunk, extensions=['tables'])
-                    # 清理表格多余空白
-                    table_html = re.sub(r'>\s+<', '><', table_html)
+                    table_html = re.sub(r'\s*style="[^"]*"', '', table_html)
+                    table_html = table_html.replace('<table>', '<table class="has-fixed-layout">')
+                    table_html = re.sub(r'>\s+<', '><', table_html).strip()
                     output_blocks.append(f'<!-- wp:table -->\n<figure class="wp-block-table">{table_html}</figure>\n<!-- /wp:table -->')
                 elif chunk.startswith("- ") or chunk.startswith("* "):
                     # 无序列表 Block
