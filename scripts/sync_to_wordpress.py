@@ -85,6 +85,9 @@ def markdown_to_gutenberg_blocks(md_text):
     # 替换特殊货币符号避免被解析器忽略
     protected_md = md_text.replace("$", "美元 ")
     
+    # 规范化：确保每个以 # 开头的标题后都有空行，防止随后的段落因单换行粘连被漏掉
+    protected_md = re.sub(r'^(#{1,6}\s+[^\n]+)\n(?!\n)', r'\1\n\n', protected_md, flags=re.MULTILINE)
+    
     # 保护已存在的 Gutenberg Block 注释（如 Rank Math FAQ block）
     wp_pattern = re.compile(r'(<!-- wp:[a-z0-9\-\/]+.*?-->.*?<!-- /wp:[a-z0-9\-\/]+ -->)', re.DOTALL)
     parts = wp_pattern.split(protected_md)
