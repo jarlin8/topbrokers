@@ -59,7 +59,7 @@ review:
 
 在那个互联网杠杆交易刚刚萌芽的年代，ETX Capital 与 IG Group、CMC Markets 并称为**英国金融点差交易（Financial Spread Betting）的“三剑客”**。它的名字取自三个核心词汇的首字母：Electronic trading（电子交易）、Telephone trading（电话撮合）和 eXecution（执行服务）。其母公司 Monecor 更是早在 1965 年就已在伦敦金融城扎根，历史底蕴比绝大多数现代外汇平台都要久远得多。
 
-然而，近两年在各大外汇社区和搜索引擎上，关于“ETX Capital 为什么打不开了？”、“ETX 账户里的钱如何提出来？”、“OvalX 和 ETX 到底什么关系？”的询问层出不穷。为了还原事实全貌、维护广大投资者的知情权与资金安全，开户通调取英国金融行为监管局（FCA）官方公告、伦敦破产法院清算法案以及行业一手平移协议，为大家带来这份权威求证的深度调查报告。
+然而，这家拥有近六十年历史的英伦老牌券商在 2022 年更名为 OvalX 后遭遇资本退潮，已于 **2023 年 3 月正式终止零售交易业务并进入清算程序**，英国 FCA 牌照（FRN: 124721）亦已失效。以下结合英国 FCA 官方公告、伦敦破产法院清算档案以及客户资产平移协议，梳理 ETX Capital（OvalX）的停运始末与存量资金追索路径，帮助投资者认清现状、防范二次欺诈。
 
 ![ETX Capital 官方品牌标识与业务清算指引](https://cdn.jsdelivr.net/gh/jarlin8/fendou.la@accfcbd/attachments/etx-etx-brand.png)
 

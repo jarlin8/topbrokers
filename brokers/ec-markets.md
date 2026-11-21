@@ -60,7 +60,7 @@ review:
 
 很多老交易员早年就用过它的 MT4 账户，看中的是它“ECN 双边仅 3 美元/手、锁仓不占保证金、银联出金两小时内到账”的硬核交易条件。而到了近两年，EC Markets 更是直接拿下了英超豪门**利物浦足球俱乐部（Liverpool FC）官方全球合作伙伴**的重磅赞助，并把全球合规版图一口气扩充到了 **7 个国家与地区的监管牌照**（涵盖英国 FCA、澳洲 ASIC、新西兰 FMA、阿联酋 SCA、南非 FSCA、毛里求斯 FSC 与塞舌尔 FSA）。
 
-今天，开户通就结合 EC Markets 最新官方账户条款与监管档案，把它的 7 国牌照分工、STD/ECN/PRO 三档账户真实成本（10 美元起存与 0 点差免佣怎么选）、0.02 秒撮合与锁仓规则以及 2 小时极速出金实测一次讲透。
+无论是 10 美元起存的 STD/ECN 账户，还是 0.0 点差且 0 佣金的 PRO 账户，EC Markets 在交易成本、0.02 秒撮合速度与锁仓保证金规则上都很有竞争力；不过开户前也需留意它对股指品种仍按单边收取锁仓保证金，且暂不支持 cTrader 与 TradingView 直连。
 
 ![EC Markets 官方品牌标识与利物浦官方全球合作伙伴、7国监管认证](https://cdn.jsdelivr.net/gh/jarlin8/fendou.la@9ef5c50/attachments/ec-markets-ec-markets-brand.png)
 

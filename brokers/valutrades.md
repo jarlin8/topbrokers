@@ -61,7 +61,7 @@ review:
 
 2012 年在英国伦敦金融城创立的 Valutrades Limited（其前身为 Monex Capital Markets），在资深量化交易员和 EA 开发者圈子中拥有极佳的口碑。业内公认老将 Graeme Watkins 出任首席执行官（CEO）后，Valutrades 砍掉了传统做市商常见的繁杂套路，将核心精力倾注在 Equinix LD4 机房的撮合速度、原始 0 点差以及 FIX API 机构级接口上。
 
-然而，2026 年行业媒体和各大交易社群中突然爆出“Valutrades 即将关停倒闭”、“全面退出全球市场”的惊人流言。这到底是怎么回事？已经开设账户的存量资金还能否安全出金？其英国 FCA 牌照的真实状态到底如何？今天开户通从第一手监管审计报告与实盘数据切入，为大家带来一份客观求证的权威测评。
+2026 年行业媒体和交易社群中曾传出“Valutrades 即将关停倒闭”的流言，但核查英国工商局（Companies House）与英国 FCA（FRN: 586541）官方档案后可以确认：**Valutrades 并未倒闭，而是主动展开了“战略客户组合优化”，阶段性暂停了全球常规零售散户的新开户申请**，将业务聚焦于高净值客户与机构流动性撮合，存量客户的日常交易与出入金均正常运转。
 
 ![Valutrades 跨设备客户端与官方多资产交易信号界面](https://cdn.jsdelivr.net/gh/jarlin8/fendou.la@3a68f27/attachments/val-valutrades-devices.png)
 
