@@ -9,7 +9,7 @@
 
 ## Wave 1：最高 ROI 核心池（第 1–15 家 · 优先吃流量与华语区大牌）
 
-- [ ] **1. ForexChief (现 xChief)** (`ID: 29499` / `forexchief`) — `publish` | GSC 828 imp / GA4 70 pv | 已更名 `xChief`（`xchief.com`），FSCA `54829` + MISA `T2023379`
+- [x] **1. ForexChief (现 xChief)** (`ID: 29499` / `forexchief`) — `publish` | GSC 828 imp / GA4 70 pv | 已更名 `xChief`（`xchief.com`），FSCA `54829` + MISA `T2023379`（2026-11-23 已完成重构上线）
 - [ ] **2. 蓝莓市场 Blueberry Markets** (`ID: 29662` / `blueberry-markets`) — `draft` | GSC 366 imp / 3 clk / GA4 56 pv | VFSC + 2026 年 1 月阿联酋 CMA 5 类牌照
 - [ ] **3. 乐天证券香港** (`ID: 29664` / `rakuten-securities-hong-kong`) — `draft` | GSC 250 imp / 4 clk / GA4 49 pv | 香港 SFC `AIM232`
 - [ ] **4. M4Markets** (`ID: 29557` / `m4markets`) — `draft` | GSC 115 imp / GA4 37 pv | CySEC / DFSA / 塞舌尔 FSA
