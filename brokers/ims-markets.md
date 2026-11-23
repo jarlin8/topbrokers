@@ -2,7 +2,7 @@
 id: 29541
 name: IMS Markets
 slug: ims-markets
-status: publish
+status: "draft"
 type: external
 external_url: https://s.ssgg.net/vs
 button_text: 官网开户

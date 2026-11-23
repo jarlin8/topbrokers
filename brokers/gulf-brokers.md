@@ -2,7 +2,7 @@
 id: 29530
 name: GULF Brokers海湾经纪
 slug: gulf-brokers
-status: publish
+status: "draft"
 type: external
 external_url: https://s.ssgg.net/vs
 button_text: 官网开户

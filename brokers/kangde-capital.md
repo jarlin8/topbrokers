@@ -2,7 +2,7 @@
 id: 29661
 name: 康德资本
 slug: kangde-capital
-status: publish
+status: "draft"
 type: external
 external_url: https://www.ifttt.fun/go/forexcom
 button_text: 官网开户

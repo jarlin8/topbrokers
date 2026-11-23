@@ -2,7 +2,7 @@
 id: 28782
 name: AxCap247
 slug: axcap247
-status: publish
+status: "draft"
 type: external
 external_url: https://s.ssgg.net/vs
 button_text: 官网开户

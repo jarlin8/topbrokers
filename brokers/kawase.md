@@ -2,7 +2,7 @@
 id: 29660
 name: 凯万斯KAWASE
 slug: kawase
-status: publish
+status: "draft"
 type: external
 external_url: https://www.ifttt.fun/go/forexcom
 button_text: 官网开户

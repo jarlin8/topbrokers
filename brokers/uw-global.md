@@ -2,7 +2,7 @@
 id: 29635
 name: UW Global
 slug: uw-global
-status: publish
+status: "draft"
 type: external
 external_url: https://s.ssgg.net/vs
 button_text: 官网开户

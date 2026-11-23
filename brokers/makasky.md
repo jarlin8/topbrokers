@@ -2,7 +2,7 @@
 id: 29559
 name: MAKASKY
 slug: makasky
-status: publish
+status: "draft"
 type: external
 external_url: https://s.ssgg.net/vs
 button_text: 官网开户

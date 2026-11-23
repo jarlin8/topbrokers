@@ -2,7 +2,7 @@
 id: 29542
 name: Interstellar FX
 slug: interstellar-fx
-status: publish
+status: "draft"
 type: external
 external_url: https://s.ssgg.net/vs
 button_text: 官网开户

@@ -2,7 +2,7 @@
 id: 28805
 name: LHCM
 slug: lhcm
-status: publish
+status: "draft"
 type: external
 external_url: https://s.ssgg.net/vs
 button_text: 官网开户

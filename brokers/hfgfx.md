@@ -2,7 +2,7 @@
 id: 28800
 name: HFGFX奥弗国际
 slug: hfgfx
-status: publish
+status: "draft"
 type: external
 external_url: https://s.ssgg.net/vs
 button_text: 官网开户
