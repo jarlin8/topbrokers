@@ -1,97 +1,203 @@
 ---
 id: 28715
-name: STARTRADER
-slug: startrader
-status: draft
-type: external
-external_url: https://s.ssgg.net/vs
-button_text: 官网开户
+name: "STARTRADER"
+slug: "startrader"
+status: "publish"
+type: "external"
+external_url: "https://s.ssgg.net/vs"
+button_text: "官网开户"
+
+# === SEO 字段 (Rank Math) ===
 seo:
-  focus_keyword: STARTRADER
-  title: STARTRADER测评：支持USDT入金的平台
-  description: STARTRADER受FCA、ASIC监管，最低入金100美元，支持美金电汇、人民币和USDT三种入金方式。本文整理其点差、交易品种与出金时效，并附用户实际反馈。
+  focus_keyword: "STARTRADER"
+  title: "STARTRADER 2026最新评测：五重监管、劳合社3000万美元保险与ECN点差实测"
+  description: "2026深度评测STARTRADER（startrader.com）：核实澳洲ASIC 421210、南非FSCA 52464、毛里求斯FSC GB24203371、塞舌尔FSA SD049与阿联酋CMA第5类牌照（澄清无英国FCA零售牌照）、2026年10月升级的劳合社3000万美元资金保险、Standard/ECN/Prime ECN账户、1:500–1:1000杠杆及USDT出入金实测。"
+
+# === REHub 核心比价 16 大属性（驱动 /compare 比价工具，务必填满） ===
 attributes:
-  成立时间: 2018年
-  经营模式: STP/ECN
-  监管机构: FCA STP直通式牌照,FSA 金融衍生品牌照,ASIC AR牌照
-  注册地: 圣文森特和格林纳丁斯
-  最低入金: 100美元
-  入金方式: 美金电汇、人民币入金、USDT入金
-  出金优惠: 1-3个工作日到账
-  点差类型: 浮动点差
-  可锁仓?: 允许
-  剥头皮?: 允许
-  最大杠杆: '100'
-  爆仓比例: 30%
-  最小头寸: 0.01手
-  主要点差: 黄金：4.7 欧美：0.0 镑美：2.4 美日：2.7 澳美：1.8
-  交易品种: 外汇,大宗商品,指数,贵金属
-  交易软件: MT4
+  注册地: "澳大利亚与塞舌尔（集团实体分布于澳洲、南非、毛里求斯、塞舌尔与迪拜）"
+  监管机构: ["澳大利亚 ASIC (AFSL 421210)", "南非 FSCA (FSP 52464)", "毛里求斯 FSC (GB24203371)", "塞舌尔 FSA (SD049)", "阿联酋 CMA (第5类 20200000241)"]
+  成立时间: "2019"
+  经营模式: "STP / ECN 直通式"
+  最低入金: "50 美元（Standard/ECN 账户，Prime ECN 10,000 美元）"
+  入金方式: ["USDT/加密货币", "人民币本地通道/银联", "Visa/Mastercard", "STICPAY", "Bitwallet", "国际电汇"]
+  出金优惠: "卡/加密货币/电子钱包平台端 0 手续费，国际电汇收 25 账户货币单位"
+  主要点差: "ECN 0.0 点起（双边 6 美元/手） Prime ECN 0.0 点起（双边 4 美元/手） Standard 1.3–1.4 点起"
+  点差类型: "浮动点差"
+  交易品种: ["外汇", "贵金属", "大宗商品", "指数", "股票CFD", "加密货币CFD"]
+  交易软件: ["MT4", "MT5", "STARTRADER App", "WebTrader", "STAR Copy 跟单"]
+  最大杠杆: "1:1000（常规默认 1:500，澳洲 ASIC 零售端限 1:30）"
+  最小头寸: "0.01手"
+  爆仓比例: "20%（追保比例 50%）"
+  可锁仓？: "允许"
+  剥头皮？: "允许"
+
+# === REHub 评测卡片与口碑评分（Review Meta） ===
 review:
-  overall_score: 8.2
-  heading: 暂无
+  overall_score: 8.3
+  heading: "五重监管与劳合社3000万美元保险：ECN低佣金、STAR Copy与出入金实测"
+  summary_text: "五重监管与三千万保险"
   pros:
-  - 2018年成立
-  - FCASTP直通式牌照,FSA金融衍生品牌照,ASICAR牌照
-  - 100美元最低入金
-  - 黄金：4.7欧美：0.0镑美：2.4美日：2.7澳美：1.8
-  - 1-3个工作日到账
+    - "持有澳洲 ASIC（421210）、南非 FSCA（52464）、毛里求斯 FSC（GB24203371）、塞舌尔 FSA（SD049）与阿联酋 CMA 第 5 类牌照，且为金融委员会成员（单案最高 2 万欧元赔付）"
+    - "2026 年 10 月将伦敦劳合社（Arch 等辛迪加承保）客户资金保险大幅提升至最高 3,000 万美元（面向毛里求斯实体符合条件客户）"
+    - "Standard 与 ECN 账户仅 50 美元起存，ECN 0.0 点起（双边约 6 美元/手），Prime ECN 双边低至 4 美元/手，0 闲置费，支持 USDT 与人民币本地入金"
   cons:
-  - 不支持美国客户
-  criteria: []
+    - "并不持有英国 FCA 零售外汇/CFD 牌照（英国公司 S.T.R. Integrated Services Limited 仅负责行政与支付支持，不提供受监管交易服务）"
+    - "中国内地及国际零售客户主要归属毛里求斯 FSC 或塞舌尔 FSA 实体，不直接适用澳洲 ASIC 1:30 零售端保护；不接受美国、欧盟/英国零售及香港客户"
+    - "国际银行电汇出金收取固定 25 账户货币单位手续费；Prime ECN 账户需 10,000 美元起存，且 90 天无活动且余额低于 10 美元的账户将被自动归档"
+  criteria:
+    - name: "监管资质与安全"
+      score: 8.4
+    - name: "点差与交易成本"
+      score: 8.3
+    - name: "出入金通道与时效"
+      score: 8.2
+    - name: "交易软件与执行"
+      score: 8.3
 ---
 
-* 账户费用: STP账户: /
-  * 服务器时区: 夏令时间GMT+3冬令时间GMT+2
-  * 官网网址: <https://www.startrader.com>
-  * 服务电话: 4001201725
+创立于 2019 年的 **STARTRADER** 是一家在亚太、中东与非洲市场扩张迅速的多资产差价合约经纪商，目前持有澳大利亚 ASIC（`AFSL 421210`）、南非 FSCA（`FSP 52464`）、毛里求斯 FSC（`GB24203371`）、塞舌尔 FSA（`SD049`）以及阿联酋 SCA/CMA 第 5 类牌照（`20200000241`）五重监管资质，同时也是金融委员会（Financial Commission）注册成员。2026 年 10 月，STARTRADER 进一步将由伦敦劳合社（Arch 等辛迪加）承保的客户资金保险总额度大幅提升至 **3,000 万美元**。
 
+在交易条件与本地化服务上，STARTRADER 提供简体/繁体中文官网、中文帮助中心（`starhelpcenter.com`）与中文客服，支持 **MT4、MT5、WebTrader、STARTRADER App 与 STAR Copy 跟单社区**，Standard 与 ECN 账户最低入金仅 **50 美元**，ECN 账户原始点差 **0.0 点起**，并支持 USDT、人民币本地通道与信用卡出入金。
 
+![STARTRADER 品牌标识与五重监管及劳合社 3000 万美元资金保险](https://cdn.jsdelivr.net/gh/jarlin8/fendou.la@4fb94ba/attachments/startrader-startrader-brand.png)
 
-STARTRADER 成立于 2018 年，在圣文森特和格林纳丁斯注册。该公司提供 MT4 平台、STP-ECN 的经营模式、0.01 手的交易手数等特点，可以满足大部分客户对交易的基本需求。此外，该公司提供多种入金方式，包括美金电汇、人民币入金、USDT 入金等。该公司最低入金为 100 美元，属于市场平均水平。STARTRADER 的客服支持中英文服务，客服电话为 400 120 1725。
+---
 
-## 监管信息
+## 交易终端生态：MT4 / MT5、STARTRADER App 与 STAR Copy 跟单
 
-目前，STARTRADER 主要由三座城市的监管机构监管，其中英国 FCA 监管对该公司的管理地位最高，被评为 AAA 级监管，如此高标准的监管说明 STARTRADER 对交易安全和客户权益的重视程度，以及管理和合规方面的优秀表现。需要注意的是，虽然 STARTRADER 没有在国内获得相应的外汇牌照，但对于中国客户仍然有比较友好的政策和服务。
+STARTRADER 在传统 MetaTrader 基础上补齐了自研移动端与社交跟单生态：
 
-## 费用和点差
+* **MetaTrader 4 与 MetaTrader 5**：服务器时区为 **GMT+2（夏令时 GMT+3）**，支持桌面端、网页端与移动端，全面兼容 EA 自动化交易、剥头皮与锁仓对冲；
+* **STARTRADER 官方 App 与 WebTrader**：集成实盘/模拟账户管理、实时净值与浮盈监控、一键出入金与行情图表，无需安装桌面客户端即可在浏览器或手机端完成交易；
+* **STAR Copy 跟单社区**：内置每周 Top 20 信号榜单与年化收益/胜率筛选面板，支持投资者一键复制资深交易员策略。
 
-STARTRADER 具有一定的费用和点差优势，因为其交易模式为 STP-ECN，不设置更低的价差，客户可以得到更具市场竞争力的价格，保证交易的公平合理性。对于外汇交易，STARTRADER 的点差在 2.2 个点左右，对于大部分主流货币都属于比较低的水平。
+![STARTRADER 官方移动端 App、STAR Copy 跟单社区与 MT4/MT5 交易生态](https://cdn.jsdelivr.net/gh/jarlin8/fendou.la@5c3ce8d/attachments/startrader-startrader-platform.png)
 
-## 交易品种
+---
 
-STARTRADER 的交易品种分类较为简单，包括主流的七种货币对、黄金等商品，实体交易相对较少，但分类清晰。STARTRADER 网站上有在线数据和报价，非常及时、完整和方便，可以帮助客户精准了解市场动态和趋势，下单更加明确精准。此外，STARTRADER 还有 MT4 平台，方便客户进行交易和管理。
+## Standard、ECN 与 Prime ECN 账户点差、佣金及杠杆实测
 
-## STARTRADER 优劣分析
+根据 `starhelpcenter.com` 与官方账户披露，STARTRADER 提供 **Standard**、**ECN** 与 **Prime ECN** 三类核心账户，最小下单 **0.01 手**，常规追保比例为 **50%**、强平比例为 **20%**：
 
-在交易商的多个方面，STARTRADER 都存在一定的优势以及一些可以积极改进的地方。具体来看，它的优点是点差较低，出入金渠道多样化且操作方便，监管机构口碑较好和信誉度较高；需要改进的是交易品种方面可以多加拓展和完善，退市率和爆仓等方面存在一定的风险潜在因素。
+* **Standard 标准账户**：最低入金 **50 美元**，**0 佣金**，欧美等主流货币对浮动点差约 **1.3–1.4 点起**，适合波段持仓与不想单独核算佣金的交易员；
+* **ECN 账户**：最低入金 **50 美元**，原始点差 **0.0 点起**，双边佣金约 **6 美元/手（单边 3 美元）**，适合日内短线与 EA 高频策略；
+* **Prime ECN 机构级账户**：最低入金 **10,000 美元**，原始点差 **0.0 点起**，双边佣金降至 **4 美元/手（单边 2 美元）**，面向大资金高频交易员；
+* **杠杆规则**：国际离岸端常规默认最大杠杆为 **1:500**，部分账户与品种最高可申请 **1:1000**（随账户净值与监管辖区动态调整）；澳大利亚 ASIC 零售端受监管限制最高为 **1:30**。
 
-## 优点
+| 核心对比项 | Standard 标准账户 | ECN 账户 | Prime ECN 账户 |
+| :--- | :--- | :--- | :--- |
+| **适用平台** | MT4 / MT5 / App / WebTrader | MT4 / MT5 / App / WebTrader | MT4 / MT5 / App / WebTrader |
+| **最低入金门槛** | **50 美元** | **50 美元** | **10,000 美元** |
+| **点差与佣金** | 1.3–1.4 点起 · **0 佣金** | **0.0 点起 · 双边约 6 美元/手** | **0.0 点起 · 双边 4 美元/手** |
+| **最大杠杆** | **1:500–1:1000**（澳洲 ASIC 1:30） | **1:500–1:1000**（澳洲 ASIC 1:30） | **1:500–1:1000**（澳洲 ASIC 1:30） |
+| **强平 / 追保比例** | **20%** / 50% | **20%** / 50% | **20%** / 50% |
 
-### 低点差
+---
 
-STARTRADER 是一家 STP-ECN 的交易商，该模式无需对冲，所以客户可以得到非常具有市场竞争力的价格，点差设置得也比其他交易商低。对于外汇交易来说，STARTRADER 的点差在 2.2 个点左右，对于主流货币都属于较低水平。
+## 监管牌照核查：五重持牌实体、英国公司澄清与 3,000 万美元保险
 
-### 出入金渠道多样化且操作方便
+围绕 STARTRADER 的监管信息在中文网络上常被误传为“受英国 FCA 监管”，开户前务必核清以下事实：
 
-STARTRADER 的出入金渠道主要包括美金电汇、人民币入金、USDT 入金等多个途径，方便客户选择合适的方式进行操作。此外，入金和出金的费用也没有太大的机构斤斤计较，给客户带来了一定的便利。
+### 澄清英国 FCA 传闻与五重持牌实体
 
-### 监管机构口碑较好和信誉度较高
+* **无英国 FCA 零售交易牌照**：STARTRADER **并不持有英国 FCA 零售外汇/CFD 经纪商牌照**；其在英国注册的 **`S.T.R. Integrated Services Limited`**（英国公司号 `17416201`）仅负责集团行政与支付支持，明确不提供受监管金融产品或交易服务；
+* **澳大利亚 ASIC（`AFSL 421210`）**：**`STARTRADER Prime Global Pty Ltd`**（ACN `156 005 668`）持有澳洲 ASIC 金融服务牌照 `421210`；
+* **南非 FSCA（`FSP 52464`）**：**`STARTRADER International Pty Ltd`** 受南非金融部门行为监管局监管；
+* **毛里求斯 FSC（`GB24203371`）与塞舌尔 FSA（`SD049`）**：国际零售客户主要开立在毛里求斯实体 **`STARTRADER Financial Markets Limited`**（`GB24203371`）或塞舌尔实体 **`STARTRADER Limited`**（`SD049`）名下；
+* **阿联酋 SCA / CMA 第 5 类牌照（`20200000241`）**：**`STARTRADER Global Financial Consultation & Financial Analysis`** 持有阿联酋第 5 类牌照，仅限金融咨询、推广与介绍活动。
 
-STARTRADER 的监管机构中，以 FCA 监管等级 AAA 级质量最高，说明其管理监督机制十分完善，对客户资金保护的有力，同时也有更大的责任感和义务感。这样的背书是对 STARTRADER 的一种应有的肯定，也可以为客户提供更加信赖的服务。
+### 劳合社 3,000 万美元保险与金融委员会保障
 
-## 需要改进
+* **3,000 万美元劳合社资金保险**：2026 年 10 月，STARTRADER 宣布将由 Arch 及伦敦劳合社辛迪加承保的客户资金保险总额度提升至 **3,000 万美元**（面向毛里求斯 FSC 实体符合条件客户）；
+* **金融委员会（Financial Commission）**：作为注册成员，客户若遇争议可申请独立第三方仲裁，单案最高享 **20,000 欧元** 赔偿基金保障；
+* **限制地区**：不接受美国、欧盟/英国零售客户及香港居民开户。
 
-### 交易品种方面可以多加拓展和完善
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons">
+<!-- wp:button {"backgroundColor":"primary","textColor":"white","style":{"border":{"radius":"4px"}},"fontSize":"medium"} -->
+<div class="wp-block-button has-custom-font-size has-medium-font-size"><a class="wp-block-button__link wp-element-button has-white-color has-primary-background-color has-text-color has-background" href="https://s.ssgg.net/vs" target="_blank" rel="nofollow noopener">访问开户通对比全球一线持牌券商</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
 
-STARTRADER 的交易品种分类相对较少，不过分类清晰，它主要由主流货币对和黄金所组成，带来了一定的限制和局限性，需要拓展更多的金融品种以丰富产品线。特别是那些可以让投资者进一步进行多元化风险管理的产品，例如个股、期货等，是能够带来更多客户和交易的潜在自然溢出效应。
+---
 
-### 退市率和爆仓等方面存在一定的风险潜在因素
+## 出入金通道、25 美元电汇费与 90 天归档规则
 
-由于外汇行情变化剧烈，客户可能会造成受到一定的损失，甚至出现退市的情况，因此，在交易时一定要格外小心谨慎。此外，为了避免因为波动导致的经济损失，建议客户在交易时适当的控制风险，注重风控管理，以此来降低爆仓或退市的风险。
+根据 `starhelpcenter.com` 资金条款披露：
 
-## 总结
+* **出入金通道与同源退回原则**：支持 **USDT 等加密货币**、**人民币本地通道/银联**、**Visa/Mastercard 信用卡**、**STICPAY / Bitwallet** 与 **国际银行电汇**；出金严格遵循“原路同源退回”优先级（信用卡优先退回本金，其次本地银行转账，再其次其他渠道）；
+* **出入金手续费**：入金平台端 **0 手续费**；信用卡、加密货币与电子钱包出金平台端通常 **0 手续费**，但**国际银行电汇出金收取固定 25 账户货币单位手续费**（如 25 美元）；
+* **0 闲置费与 90 天低余额归档**：STARTRADER **不收取月度账户闲置费**；但若账户连续 **90 天及以上** 无登录或交易活动，且余额 **低于或等于 10 美元**（美分账户为 1,000 USC），系统将自动归档关闭该账户。
 
-STARTRADER 是一家性价比比较高的外汇交易商，在整个行业中处于中上水平。它的低点差优势和多样且方便的出入金渠道，以及好口碑的监管机构，都是它的优点，而需要提高的方面主要是交易品种的拓展和完善，以及风险潜在因素的关注。对于初学者和有一定经验的个人投资者来说，STARTRADER 是一个可以选择的优秀交易平台，但在交易前先进行宏观分析和风险控制，以保证投资利益的最大化。
+---
 
-## 开户通推荐TOP5
+## 与同赛道华语区热门多牌照券商的横向微对比
+
+在同样主打 50 美元低门槛、USDT/人民币入金与劳合社/金融委员会保障的华语区热门券商中，将 STARTRADER 与 VT Markets、PU Prime 和 Ultima Markets 对比如下：
+
+| 对比维度 | STARTRADER | VT Markets | PU Prime | Ultima Markets |
+| :--- | :--- | :--- | :--- | :--- |
+| **核心监管牌照** | **ASIC / FSCA / FSC / FSA / CMA** | 澳洲 ASIC / 南非 FSCA / FSC / SCA | 澳洲 ASIC / FSA / FSCA / FSC / CMA | 塞浦路斯 CySEC / FSCA / FSC |
+| **额外资金保障** | **劳合社 3,000 万美元 + 金融委员会** | 金融委员会 2 万欧元 | 金融委员会 2 万欧元 | 金融委员会 2 万欧元 |
+| **最低入金与最高杠杆** | **50 美元 · 1:500–1:1000** | 50 美元 · 1:500 | 50 美元 · 1:1000 | 50 美元 · 1:2000 |
+| **ECN 账户双边佣金** | **约 6 美元/手（Prime 4 美元）** | 6 美元/手 | 7 美元/手 | 5–6 美元/手 |
+
+---
+
+## 开户通提醒：实盘客观痛点与注意事项
+
+结合 2026 年最新监管登记与帮助中心条款，开户通提醒交易员重点留意以下四点：
+
+1. **切勿轻信“英国 FCA 监管”旧宣传**：
+   * STARTRADER 英国公司 `S.T.R. Integrated Services Limited` 仅作行政与支付支持，并不持有英国 FCA 零售交易牌照；华语区客户实际开立在毛里求斯 FSC（`GB24203371`）或塞舌尔 FSA（`SD049`）实体下；
+2. **国际银行电汇出金固定扣 25 美元**：
+   * 信用卡、USDT 与电子钱包出金平台端免手续费，但若选择国际电汇出金，每笔将扣除 25 账户货币单位（如 25 美元），小额出金建议优先使用 USDT 或本地通道；
+3. **严格执行“原路同源退回”出金顺序**：
+   * 若曾使用信用卡入金，出金时必须先将等额本金退回原信用卡，超出本金的盈利部分才可通过银行转账或电子钱包提取；
+4. **90 天无活动且余额 ≤10 美元将自动归档**：
+   * 虽不扣闲置费，但长期不用的小额账户满 90 天会被系统自动归档关闭，需联系客服重新激活。
+
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+<div class="wp-block-buttons">
+<!-- wp:button {"backgroundColor":"primary","textColor":"white","style":{"border":{"radius":"4px"}},"fontSize":"medium"} -->
+<div class="wp-block-button has-custom-font-size has-medium-font-size"><a class="wp-block-button__link wp-element-button has-white-color has-primary-background-color has-text-color has-background" href="https://s.ssgg.net/vs" target="_blank" rel="nofollow noopener">访问开户通对比全球一线持牌券商</a></div>
+<!-- /wp:button -->
+</div>
+<!-- /wp:buttons -->
+
+---
+
+## 常见问题实务答疑
+
+<!-- wp:rank-math/faq-block {"questions":[{"id":"faq-question-1","title":"STARTRADER 是正规平台吗？受英国 FCA 监管吗？","content":"<p>STARTRADER 创立于 2019 年，持有澳洲 ASIC（421210）、南非 FSCA（52464）、毛里求斯 FSC（GB24203371）、塞舌尔 FSA（SD049）与阿联酋 CMA 第 5 类牌照（20200000241），且为金融委员会成员并配有最高 3,000 万美元劳合社资金保险。但需注意，STARTRADER 并不持有英国 FCA 零售交易牌照，其英国公司仅负责行政与支付支持。</p>","visible":true},{"id":"faq-question-2","title":"STARTRADER 的最低入金、点差和佣金是多少？","content":"<p>Standard 与 ECN 账户最低入金均为 50 美元，Prime ECN 账户最低入金 10,000 美元。Standard 账户点差约 1.3–1.4 点起、0 佣金；ECN 账户原始点差 0.0 点起、双边佣金约 6 美元/手；Prime ECN 账户双边佣金低至 4 美元/手。</p>","visible":true},{"id":"faq-question-3","title":"STARTRADER 的最大杠杆和爆仓比例是多少？","content":"<p>国际离岸端常规默认最大杠杆为 1:500，部分账户最高可申请 1:1000（澳洲 ASIC 零售端限 1:30）；全系账户常规追保比例为 50%，强平（爆仓）比例为 20%。</p>","visible":true},{"id":"faq-question-4","title":"STARTRADER 支持 USDT 和人民币出入金吗？手续费多少？","content":"<p>支持 USDT 等加密货币、人民币本地通道/银联、Visa/Mastercard、STICPAY、Bitwallet 与国际电汇。入金平台端 0 手续费；卡、加密货币与电子钱包出金平台端通常免费，国际银行电汇出金收取固定 25 账户货币单位手续费。</p>","visible":true},{"id":"faq-question-5","title":"STARTRADER 支持哪些交易软件？有跟单功能吗？","content":"<p>支持 MetaTrader 4（MT4）、MetaTrader 5（MT5）、WebTrader 网页端、STARTRADER 官方移动端 App 以及内置的 STAR Copy 跟单社区，服务器时区为 GMT+2（夏令时 GMT+3）。</p>","visible":true},{"id":"faq-question-6","title":"STARTRADER 收取账户闲置费吗？","content":"<p>不收取月度闲置费。但若账户连续 90 天及以上无登录或交易活动，且余额低于或等于 10 美元（美分账户为 1,000 USC），系统将自动归档关闭该账户。</p>","visible":true}]} -->
+<div id="rank-math-faq" class="rank-math-block">
+<div class="rank-math-list ">
+<div id="faq-question-1" class="rank-math-list-item">
+<h3 class="rank-math-question ">STARTRADER 是正规平台吗？受英国 FCA 监管吗？</h3>
+<div class="rank-math-answer "><p>STARTRADER 创立于 2019 年，持有澳洲 ASIC（421210）、南非 FSCA（52464）、毛里求斯 FSC（GB24203371）、塞舌尔 FSA（SD049）与阿联酋 CMA 第 5 类牌照（20200000241），且为金融委员会成员并配有最高 3,000 万美元劳合社资金保险。但需注意，STARTRADER 并不持有英国 FCA 零售交易牌照，其英国公司仅负责行政与支付支持。</p></div>
+</div>
+<div id="faq-question-2" class="rank-math-list-item">
+<h3 class="rank-math-question ">STARTRADER 的最低入金、点差和佣金是多少？</h3>
+<div class="rank-math-answer "><p>Standard 与 ECN 账户最低入金均为 50 美元，Prime ECN 账户最低入金 10,000 美元。Standard 账户点差约 1.3–1.4 点起、0 佣金；ECN 账户原始点差 0.0 点起、双边佣金约 6 美元/手；Prime ECN 账户双边佣金低至 4 美元/手。</p></div>
+</div>
+<div id="faq-question-3" class="rank-math-list-item">
+<h3 class="rank-math-question ">STARTRADER 的最大杠杆和爆仓比例是多少？</h3>
+<div class="rank-math-answer "><p>国际离岸端常规默认最大杠杆为 1:500，部分账户最高可申请 1:1000（澳洲 ASIC 零售端限 1:30）；全系账户常规追保比例为 50%，强平（爆仓）比例为 20%。</p></div>
+</div>
+<div id="faq-question-4" class="rank-math-list-item">
+<h3 class="rank-math-question ">STARTRADER 支持 USDT 和人民币出入金吗？手续费多少？</h3>
+<div class="rank-math-answer "><p>支持 USDT 等加密货币、人民币本地通道/银联、Visa/Mastercard、STICPAY、Bitwallet 与国际电汇。入金平台端 0 手续费；卡、加密货币与电子钱包出金平台端通常免费，国际银行电汇出金收取固定 25 账户货币单位手续费。</p></div>
+</div>
+<div id="faq-question-5" class="rank-math-list-item">
+<h3 class="rank-math-question ">STARTRADER 支持哪些交易软件？有跟单功能吗？</h3>
+<div class="rank-math-answer "><p>支持 MetaTrader 4（MT4）、MetaTrader 5（MT5）、WebTrader 网页端、STARTRADER 官方移动端 App 以及内置的 STAR Copy 跟单社区，服务器时区为 GMT+2（夏令时 GMT+3）。</p></div>
+</div>
+<div id="faq-question-6" class="rank-math-list-item">
+<h3 class="rank-math-question ">STARTRADER 收取账户闲置费吗？</h3>
+<div class="rank-math-answer "><p>不收取月度闲置费。但若账户连续 90 天及以上无登录或交易活动，且余额低于或等于 10 美元（美分账户为 1,000 USC），系统将自动归档关闭该账户。</p></div>
+</div>
+</div>
+</div>
+<!-- /wp:rank-math/faq-block -->
