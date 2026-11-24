@@ -12,7 +12,7 @@
 - [x] **1. ForexChief (现 xChief)** (`ID: 29499` / `forexchief`) — `publish` | GSC 828 imp / GA4 70 pv | 已更名 `xChief`（`xchief.com`），FSCA `54829` + MISA `T2023379`（2026-11-23 已完成重构上线）
 - [x] **2. 蓝莓市场 Blueberry Markets** (`ID: 29662` / `blueberry-markets`) — `publish` | GSC 366 imp / 3 clk / GA4 56 pv | VFSC + 2026 年 1 月阿联酋 CMA 5 类牌照 + 澳洲 ASIC 535887（2026-11-24 已复活重构上线）
 - [x] **3. 乐天证券香港** (`ID: 29664` / `rakuten-securities-hong-kong`) — `publish` | GSC 250 imp / 4 clk / GA4 49 pv | 香港 SFC `AIM232`（2026-11-24 已复活重构上线）
-- [ ] **4. M4Markets** (`ID: 29557` / `m4markets`) — `draft` | GSC 115 imp / GA4 37 pv | CySEC / DFSA / 塞舌尔 FSA
+- [x] **4. M4Markets** (`ID: 29557` / `m4markets`) — `publish` | GSC 115 imp / GA4 37 pv | CySEC `301/16` / DFSA `F007051` / 塞舌尔 FSA `SD035` + 劳合社 100 万美元保险（2026-11-24 已复活重构上线）
 - [ ] **5. STARTRADER** (`ID: 28715` / `startrader`) — `draft` | GSC 60 imp / GA4 30 pv | ASIC / FSCA / FSC / FSA / CMA
 - [ ] **6. 技慕环球通金融（香港）** (`ID: 28733` / `jimu-global`) — `draft` | GSC 52 imp / GA4 32 pv | GMO-Z.com Forex HK，香港 SFC `AZE792`
 - [ ] **7. DBG Markets 盾博** (`ID: 28696` / `dbg-markets`) — `draft` | GA4 100 pv | ASIC / FCA / FSCA
