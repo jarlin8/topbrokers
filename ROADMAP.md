@@ -15,7 +15,7 @@
 - [x] **4. M4Markets** (`ID: 29557` / `m4markets`) — `publish` | GSC 115 imp / GA4 37 pv | CySEC `301/16` / DFSA `F007051` / 塞舌尔 FSA `SD035` + 劳合社 100 万美元保险（2026-11-24 已复活重构上线）
 - [x] **5. STARTRADER** (`ID: 28715` / `startrader`) — `publish` | GSC 60 imp / GA4 30 pv | ASIC `421210` / FSCA `52464` / FSC `GB24203371` / FSA `SD049` / CMA `20200000241` + 劳合社 3,000 万美元保险（2026-11-24 已复活重构上线）
 - [x] **6. 技慕环球通金融（香港）** (`ID: 28733` / `jimu-global`) — `publish` | GSC 52 imp / GA4 32 pv | GMO-Z.com Forex HK，香港 SFC `AZE792`（2026-11-24 已复活重构上线）
-- [ ] **7. DBG Markets 盾博** (`ID: 28696` / `dbg-markets`) — `draft` | GA4 100 pv | ASIC / FCA / FSCA
+- [x] **7. DBG Markets 盾博** (`ID: 28696` / `dbg-markets`) — `publish` | GA4 100 pv | 安圭拉 `A000001474` 运营 / 关联 ASIC `247017` 免责 / 英国 FCA 克隆警示（2026-11-25 已复活重构上线）
 - [ ] **8. VT Markets** (`ID: 29639` / `vt-markets`) — `draft` | GSC 23 imp / GA4 47 pv | 阿联酋 SCA / FSCA / FSC（需新建本地 `.md`）
 - [ ] **9. PU Prime** (`ID: 29596` / `pu-prime`) — `draft` | GSC 7 imp / GA4 42 pv | ASIC `410681` / FSA / FSCA / CMA
 - [ ] **10. Mitrade** (`ID: 29564` / `mitrade`) — `draft` | GSC 11 imp / GA4 40 pv | ASIC / CySEC / CIMA / FSCA / FSC / CMA
