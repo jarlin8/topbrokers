@@ -111,9 +111,9 @@ Mitrade 通过六个不同司法辖区的持牌公司运营全球业务，并在
 
 * **伦敦劳合社超额损失保险（Excess of Loss）**：根据 [Mitrade 客户资金保险页](https://www.mitrade.com/zh/about-us/client-money-protection)，Mitrade 为开曼 CIMA 与毛里求斯 FSC 实体下的所有持仓交易者免费投保了由 **Lloyd's of London** 承保的破产超额保险，最高赔付额度达 **1,000,000 美元/位**；但条款明确注明**该保险仅适用于账户现存资金超过 20,000 美元的索赔**（20,000 美元及以下小额账户主要依赖银行隔离托管）。
 
-<!-- wp:buttons {\"layout\":{\"type\":\"flex\",\"justifyContent\":\"center\"}} -->
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons">
-<!-- wp:button {\"backgroundColor\":\"primary\",\"textColor\":\"white\",\"style\":{\"border\":{\"radius\":\"4px\"}},\"fontSize\":\"medium\"} -->
+<!-- wp:button {"backgroundColor":"primary","textColor":"white","style":{"border":{"radius":"4px"}},"fontSize":"medium"} -->
 <div class="wp-block-button has-custom-font-size has-medium-font-size"><a class="wp-block-button__link wp-element-button has-white-color has-primary-background-color has-text-color has-background" href="https://s.ssgg.net/vs" target="_blank" rel="nofollow noopener">访问开户通对比全球一线持牌券商</a></div>
 <!-- /wp:button -->
 </div>
@@ -157,9 +157,9 @@ Mitrade 通过六个不同司法辖区的持牌公司运营全球业务，并在
 4. **留意 6 个月 10 美元/月闲置费**：
    * 超过半年未交易且无持仓将按月扣除 10 美元直至归零，长期不用时建议及时提取余额。
 
-<!-- wp:buttons {\"layout\":{\"type\":\"flex\",\"justifyContent\":\"center\"}} -->
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons">
-<!-- wp:button {\"backgroundColor\":\"primary\",\"textColor\":\"white\",\"style\":{\"border\":{\"radius\":\"4px\"}},\"fontSize\":\"medium\"} -->
+<!-- wp:button {"backgroundColor":"primary","textColor":"white","style":{"border":{"radius":"4px"}},"fontSize":"medium"} -->
 <div class="wp-block-button has-custom-font-size has-medium-font-size"><a class="wp-block-button__link wp-element-button has-white-color has-primary-background-color has-text-color has-background" href="https://s.ssgg.net/vs" target="_blank" rel="nofollow noopener">访问开户通对比全球一线持牌券商</a></div>
 <!-- /wp:button -->
 </div>

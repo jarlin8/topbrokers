@@ -113,9 +113,9 @@ PU Prime 的多实体架构在中文网络上常被误写为“受塞浦路斯 C
 * **金融委员会成员**：根据 [金融委员会官方会员页](https://financialcommission.org/pu-prime/)，PU Prime 已于 **2024 年 7 月 16 日** 正式加入该第三方仲裁机构，客户若遇争议可享单案最高 **20,000 欧元** 赔付基金保障；
 * **伦敦劳合社资金保险**：官网披露为客户提供由伦敦劳合社（Lloyd's of London）承保的最高 **1,000,000 美元** 破产/民事责任保险（触发于经纪商无力偿债场景）。
 
-<!-- wp:buttons {\"layout\":{\"type\":\"flex\",\"justifyContent\":\"center\"}} -->
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons">
-<!-- wp:button {\"backgroundColor\":\"primary\",\"textColor\":\"white\",\"style\":{\"border\":{\"radius\":\"4px\"}},\"fontSize\":\"medium\"} -->
+<!-- wp:button {"backgroundColor":"primary","textColor":"white","style":{"border":{"radius":"4px"}},"fontSize":"medium"} -->
 <div class="wp-block-button has-custom-font-size has-medium-font-size"><a class="wp-block-button__link wp-element-button has-white-color has-primary-background-color has-text-color has-background" href="https://s.ssgg.net/vs" target="_blank" rel="nofollow noopener">访问开户通对比全球一线持牌券商</a></div>
 <!-- /wp:button -->
 </div>
@@ -159,9 +159,9 @@ PU Prime 的多实体架构在中文网络上常被误写为“受塞浦路斯 C
 4. **严格禁止延迟套利与滥用赠金**：
    * 协议明确禁止延迟套利（latency arbitrage）、报价错误套利与对敲滥用赠金，风控判定违规后有权撤销盈利并关闭账户。
 
-<!-- wp:buttons {\"layout\":{\"type\":\"flex\",\"justifyContent\":\"center\"}} -->
+<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
 <div class="wp-block-buttons">
-<!-- wp:button {\"backgroundColor\":\"primary\",\"textColor\":\"white\",\"style\":{\"border\":{\"radius\":\"4px\"}},\"fontSize\":\"medium\"} -->
+<!-- wp:button {"backgroundColor":"primary","textColor":"white","style":{"border":{"radius":"4px"}},"fontSize":"medium"} -->
 <div class="wp-block-button has-custom-font-size has-medium-font-size"><a class="wp-block-button__link wp-element-button has-white-color has-primary-background-color has-text-color has-background" href="https://s.ssgg.net/vs" target="_blank" rel="nofollow noopener">访问开户通对比全球一线持牌券商</a></div>
 <!-- /wp:button -->
 </div>
