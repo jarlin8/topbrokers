@@ -18,7 +18,7 @@
 - [x] **7. DBG Markets 盾博** (`ID: 28696` / `dbg-markets`) — `publish` | GA4 100 pv | 安圭拉 `A000001474` 运营 / 关联 ASIC `247017` 免责 / 英国 FCA 克隆警示（2026-11-25 已复活重构上线）
 - [x] **8. VT Markets** (`ID: 29639` / `vt-markets`) — `publish` | GSC 23 imp / GA4 47 pv | 澳洲 ASIC `516246` / 毛里求斯 FSC `GB23202269` / 南非 FSCA `50865` / 阿联酋 CMA `20200000299` + 劳合社 100 万美元保险（2026-11-25 已新建并复活重构上线）
 - [x] **9. PU Prime** (`ID: 29596` / `pu-prime`) — `publish` | GSC 7 imp / GA4 42 pv | ASIC `410681` / FSA `SD050` / FSC `GB23202672` / FSCA `52218` / CMA `20200000388` + 金融委员会 & 劳合社 100 万美元保险（2026-11-25 已复活重构上线）
-- [ ] **10. Mitrade** (`ID: 29564` / `mitrade`) — `draft` | GSC 11 imp / GA4 40 pv | ASIC / CySEC / CIMA / FSCA / FSC / CMA
+- [x] **10. Mitrade** (`ID: 29564` / `mitrade`) — `publish` | GSC 11 imp / GA4 40 pv | ASIC `398528` / CIMA `1612446` / CySEC `438/23` / FSC `GB20025791` / FSCA `54842` / CMA `20200000397` + 劳合社 100 万美元保险（2026-11-25 已复活重构上线）
 - [ ] **11. Juno Markets 君诺金融** (`ID: 29658` / `juno-markets`) — `draft` | GSC 25 imp / 1 clk / GA4 49 pv | ASIC `540205` / VFSC `40099`
 - [ ] **12. KCM Trade** (`ID: 29549` / `kcm-trade`) — `draft` | GSC 25 imp / GA4 34 pv | ASIC `489437` / 毛里求斯 FSC
 - [ ] **13. CMTrading** (`ID: 29466` / `cmtrading`) — `publish` | GSC 14 imp / GA4 52 pv | 南非 FSCA `38782` + 塞舌尔 `SD070`
