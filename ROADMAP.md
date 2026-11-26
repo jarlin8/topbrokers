@@ -32,7 +32,7 @@
 ### A. 剩余 14 家 `publish` P0 正常运营券商
 - [x] **16. River Prime** (`ID: 29602` / `river-prime`) — `publish` | GSC 7 imp / GA4 18 pv | 塞浦路斯 CySEC `451/24` + 毛里求斯 FSC `GB23201885` + 纳闽 `MB/19/0039` + SVG（2026-11-26 已重构上线，清除 `noindex`）
 - [x] **17. KGI 凯基** (`ID: 29550` / `kgi`) — `publish` | GSC 5 imp / GA4 54 pv | 新加坡 MAS CMS `195500144H` + 香港 SFC `BKJ214` + SGX/ICE 清算会员（2026-11-26 已重构上线，清除 `noindex`）
-- [ ] **18. Mohicans Markets (MH Markets)** (`ID: 29566` / `mohicans-markets`) — `publish` | GSC 3 imp / GA4 65 pv | 阿联酋 SCA / 毛里求斯 FSC
+- [x] **18. Mohicans Markets (MH Markets)** (`ID: 29566` / `mohicans-markets`) — `publish` | GSC 3 imp / GA4 65 pv | 澳洲 ASIC 全牌 `455388` + 毛里求斯 FSC `GB20026131` + 阿联酋 CMA `20200000159`（2026-11-26 已重构上线，清除 `noindex`）
 - [ ] **19. ARDU PRIME** (`ID: 29435` / `ardu-prime`) — `publish` | GSC 2 imp / GA4 54 pv | 希腊 HCMC
 - [ ] **20. ACCUINDEX** (`ID: 29419` / `accuindex`) — `publish` | GSC 1 imp / GA4 78 pv | CySEC / 毛里求斯 FSC
 - [ ] **21. Global GT** (`ID: 29522` / `global-gt`) — `publish` | GSC 1 imp / GA4 62 pv | FXGT 同集团
