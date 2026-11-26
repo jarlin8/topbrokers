@@ -22,7 +22,7 @@
 - [x] **11. Juno Markets 君诺金融** (`ID: 29658` / `juno-markets`) — `publish` | GSC 25 imp / 1 clk / GA4 49 pv | 瓦努阿图 VFSC `40099` 主运营 / 关联澳洲 ASIC `540205`（2026-11-25 已复活重构上线）
 - [x] **12. KCM Trade** (`ID: 29549` / `kcm-trade`) — `publish` | GSC 25 imp / GA4 34 pv | 毛里求斯 FSC `C117022600` 主运营 / 关联澳洲 ASIC `489437`（2026-11-26 已复活重构上线）
 - [x] **13. CMTrading** (`ID: 29466` / `cmtrading`) — `publish` | GSC 14 imp / GA4 52 pv | 南非 FSCA `38782` + 塞舌尔 FSA `SD070` + 阿联酋 CMA（2026-11-26 已重构上线，修正2012年/MT4停用）
-- [ ] **14. 永丰金融** (`ID: 29669` / `yongfeng-financial`) — `publish` | GSC 12 imp / GA4 57 pv | 香港金银业贸易场 34 号行员
+- [x] **14. 永丰金融** (`ID: 29669` / `yongfeng-financial`) — `publish` | GSC 12 imp / GA4 57 pv | 香港 SFC 证券 `AAV717` / 期货 `AMU683` + 港金所 AA类34号行员（2026-11-26 已重构上线，澄清 `ARI401` 无活跃牌照）
 - [ ] **15. CFI Markets** (`ID: 28793` / `cfi-markets`) — `publish` | GSC 2 imp / GA4 43 pv | CFI Financial Group（FCA / CySEC / SCA / FSCA）
 
 ---
