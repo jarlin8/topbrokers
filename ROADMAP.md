@@ -20,7 +20,7 @@
 - [x] **9. PU Prime** (`ID: 29596` / `pu-prime`) — `publish` | GSC 7 imp / GA4 42 pv | ASIC `410681` / FSA `SD050` / FSC `GB23202672` / FSCA `52218` / CMA `20200000388` + 金融委员会 & 劳合社 100 万美元保险（2026-11-25 已复活重构上线）
 - [x] **10. Mitrade** (`ID: 29564` / `mitrade`) — `publish` | GSC 11 imp / GA4 40 pv | ASIC `398528` / CIMA `1612446` / CySEC `438/23` / FSC `GB20025791` / FSCA `54842` / CMA `20200000397` + 劳合社 100 万美元保险（2026-11-25 已复活重构上线）
 - [x] **11. Juno Markets 君诺金融** (`ID: 29658` / `juno-markets`) — `publish` | GSC 25 imp / 1 clk / GA4 49 pv | 瓦努阿图 VFSC `40099` 主运营 / 关联澳洲 ASIC `540205`（2026-11-25 已复活重构上线）
-- [ ] **12. KCM Trade** (`ID: 29549` / `kcm-trade`) — `draft` | GSC 25 imp / GA4 34 pv | ASIC `489437` / 毛里求斯 FSC
+- [x] **12. KCM Trade** (`ID: 29549` / `kcm-trade`) — `publish` | GSC 25 imp / GA4 34 pv | 毛里求斯 FSC `C117022600` 主运营 / 关联澳洲 ASIC `489437`（2026-11-26 已复活重构上线）
 - [ ] **13. CMTrading** (`ID: 29466` / `cmtrading`) — `publish` | GSC 14 imp / GA4 52 pv | 南非 FSCA `38782` + 塞舌尔 `SD070`
 - [ ] **14. 永丰金融** (`ID: 29669` / `yongfeng-financial`) — `publish` | GSC 12 imp / GA4 57 pv | 香港金银业贸易场 34 号行员
 - [ ] **15. CFI Markets** (`ID: 28793` / `cfi-markets`) — `publish` | GSC 2 imp / GA4 43 pv | CFI Financial Group（FCA / CySEC / SCA / FSCA）
