@@ -30,7 +30,7 @@
 ## Wave 2：清零剩余 `publish` P0 正常运营 + 补齐 `draft` S 级热门（第 16–37 家 · 共 22 家）
 
 ### A. 剩余 14 家 `publish` P0 正常运营券商
-- [ ] **16. River Prime** (`ID: 29602` / `river-prime`) — `publish` | GSC 7 imp / GA4 18 pv | CySEC `451/24`
+- [x] **16. River Prime** (`ID: 29602` / `river-prime`) — `publish` | GSC 7 imp / GA4 18 pv | 塞浦路斯 CySEC `451/24` + 毛里求斯 FSC `GB23201885` + 纳闽 `MB/19/0039` + SVG（2026-11-26 已重构上线，清除 `noindex`）
 - [ ] **17. KGI 凯基** (`ID: 29550` / `kgi`) — `publish` | GSC 5 imp / GA4 54 pv | 新加坡 MAS / 香港 SFC
 - [ ] **18. Mohicans Markets (MH Markets)** (`ID: 29566` / `mohicans-markets`) — `publish` | GSC 3 imp / GA4 65 pv | 阿联酋 SCA / 毛里求斯 FSC
 - [ ] **19. ARDU PRIME** (`ID: 29435` / `ardu-prime`) — `publish` | GSC 2 imp / GA4 54 pv | 希腊 HCMC
