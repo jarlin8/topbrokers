@@ -38,7 +38,7 @@
 - [x] **21. Global GT** (`ID: 29522` / `global-gt`) — `publish` | GSC 1 imp / GA4 62 pv | 原 `globalgt.com` 已 301 并入 FXGT 统一运营（FSCA `48896` / FSA `SD019` / VFSC `700601` / CySEC `382/20` 机构）（2026-11-27 已重构上线，清除 `noindex`）
 - [x] **22. Trust Capital TC** (`ID: 28798` / `trust-capital-tc`) — `publish` | GA4 68 pv | 现品牌 Trust Capital（`trustcapital.com` / `trustcapitaltc.eu`），CySEC `369/18` + 塞舌尔 `SD122` + 黎巴嫩 BDL/CMA + SCA（2026-11-27 已重构上线，清除 `noindex`）
 - [x] **23. Rock-West (现 rewalt:)** (`ID: 29604` / `rock-west`) — `publish` | GA4 67 pv | 2026 年 8 月升级更名 `rewalt.com`（塞舌尔 FSA `SD044` / 支付宝微信 USDT / 严苛出金手数条款）（2026-11-27 已重构上线，清除 `noindex`）
-- [ ] **24. Pacific Financial Derivatives** (`ID: 29586` / `pacific-financial-derivatives`) — `publish` | GA4 60 pv | 新西兰 FMA `FSP28944`
+- [x] **24. Pacific Financial Derivatives** (`ID: 29586` / `pacific-financial-derivatives`) — `publish` | GA4 60 pv | 新西兰 FMA `FSP28944`（双边仅 2 美元佣金 / ANZ・BNZ 信托 / `pfd-fx.com` 与 `pfdmarkets.com` 警示）（2026-11-27 已重构上线，清除 `noindex`）
 - [ ] **25. 吉狮 (SBI FX HK)** (`ID: 29657` / `ji-shi`) — `publish` | GA4 59 pv | 香港 SFC `BHK360`
 - [ ] **26. Magic Compass** (`ID: 29558` / `magic-compass`) — `publish` | GA4 58 pv | 香港 SFC 1 号牌
 - [ ] **27. DBinvesting** (`ID: 29470` / `dbinvesting`) — `publish` | GA4 52 pv | 塞舌尔 `SD053`
