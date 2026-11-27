@@ -34,7 +34,7 @@
 - [x] **17. KGI 凯基** (`ID: 29550` / `kgi`) — `publish` | GSC 5 imp / GA4 54 pv | 新加坡 MAS CMS `195500144H` + 香港 SFC `BKJ214` + SGX/ICE 清算会员（2026-11-26 已重构上线，清除 `noindex`）
 - [x] **18. Mohicans Markets (MH Markets)** (`ID: 29566` / `mohicans-markets`) — `publish` | GSC 3 imp / GA4 65 pv | 澳洲 ASIC 全牌 `455388` + 毛里求斯 FSC `GB20026131` + 阿联酋 CMA `20200000159`（2026-11-26 已重构上线，清除 `noindex`）
 - [x] **19. ARDU PRIME** (`ID: 29435` / `ardu-prime`) — `publish` | GSC 2 imp / GA4 54 pv | 希腊 HCMC `1/1008/11.01.2024` 已吊销牌照、罚27万欧元并进入特别清算（2026-11-27 已重构为撤照清算警示页，清除 `noindex`）
-- [ ] **20. ACCUINDEX** (`ID: 29419` / `accuindex`) — `publish` | GSC 1 imp / GA4 78 pv | CySEC / 毛里求斯 FSC
+- [x] **20. ACCUINDEX** (`ID: 29419` / `accuindex`) — `publish` | GSC 1 imp / GA4 78 pv | CySEC `340/17` + 毛里求斯 FSC `GB19024778` + 阿联酋 CMA `20200000363` + 纳闽 `MB/24/0124`（2026-11-27 已重构上线，清除 `noindex`）
 - [ ] **21. Global GT** (`ID: 29522` / `global-gt`) — `publish` | GSC 1 imp / GA4 62 pv | FXGT 同集团
 - [ ] **22. Trust Capital TC** (`ID: 28798` / `trust-capital-tc`) — `publish` | GA4 68 pv | CySEC `369/18` / 塞舌尔 `SD122`
 - [ ] **23. Rock-West (现 rewalt:)** (`ID: 29604` / `rock-west`) — `publish` | GA4 67 pv | 2026 年 8 月更名 `rewalt.io`
